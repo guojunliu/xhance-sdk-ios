@@ -18,7 +18,8 @@
 
 - (instancetype)initWithReferrer:(NSString *)referrer {
     NSString *timeStamp = [XhanceUtil getDateTimeStamp];
-    self = [super initWithTimeStamp:timeStamp];
+    NSString *uuid = [XhanceMd5Utils MD5OfString:[NSUUID UUID].UUIDString];
+    self = [super initWithTimeStamp:timeStamp uuid:uuid];
     if (self) {
         _referrer = [referrer copy];
         [self createDataForAdvertiser];

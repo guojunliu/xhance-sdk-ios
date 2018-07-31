@@ -12,6 +12,7 @@
 		AA05D3C8207F0D0800D15153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA05D3C7207F0D0800D15153 /* Assets.xcassets */; };
 		AA05D3CB207F0D0800D15153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA05D3C9207F0D0800D15153 /* LaunchScreen.storyboard */; };
 		AA05D3CE207F0D0800D15153 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA05D3CD207F0D0800D15153 /* main.m */; };
+		AA48DCA4211012E000621BA4 /* XhanceTrackingSend.m in Sources */ = {isa = PBXBuildFile; fileRef = AA48DCA3211012DF00621BA4 /* XhanceTrackingSend.m */; };
 		AA4D037420DA39CD003352A5 /* XhanceNetConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D032B20DA39CD003352A5 /* XhanceNetConnectionManager.m */; };
 		AA4D037520DA39CD003352A5 /* XhanceNetReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D032C20DA39CD003352A5 /* XhanceNetReachability.m */; };
 		AA4D037620DA39CD003352A5 /* XhanceHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D033020DA39CD003352A5 /* XhanceHttpManager.m */; };
@@ -55,6 +56,8 @@
 		AA05D3CA207F0D0800D15153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA05D3CC207F0D0800D15153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA05D3CD207F0D0800D15153 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA48DCA2211012DF00621BA4 /* XhanceTrackingSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceTrackingSend.h; sourceTree = "<group>"; };
+		AA48DCA3211012DF00621BA4 /* XhanceTrackingSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceTrackingSend.m; sourceTree = "<group>"; };
 		AA4D032920DA39CD003352A5 /* XhanceNetConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceNetConnectionManager.h; sourceTree = "<group>"; };
 		AA4D032A20DA39CD003352A5 /* XhanceNetReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceNetReachability.h; sourceTree = "<group>"; };
 		AA4D032B20DA39CD003352A5 /* XhanceNetConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceNetConnectionManager.m; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 			children = (
 				AA4D036520DA39CD003352A5 /* XhanceTrackingManager.h */,
 				AA4D036420DA39CD003352A5 /* XhanceTrackingManager.m */,
+				AA48DCA2211012DF00621BA4 /* XhanceTrackingSend.h */,
+				AA48DCA3211012DF00621BA4 /* XhanceTrackingSend.m */,
 			);
 			path = TrackIng;
 			sourceTree = "<group>";
@@ -460,6 +465,7 @@
 				AA4D038320DA39CD003352A5 /* XhanceIAPParameter.m in Sources */,
 				AA4D037D20DA39CD003352A5 /* XhanceStatisticalSimulateIDFA.m in Sources */,
 				AA4D038920DA39CD003352A5 /* XhanceIAPManager.m in Sources */,
+				AA48DCA4211012E000621BA4 /* XhanceTrackingSend.m in Sources */,
 				AA4D038F20DA39CD003352A5 /* XhanceDeeplinkModel.m in Sources */,
 				AA4D038E20DA39CD003352A5 /* XhanceSessionModel.m in Sources */,
 				AA4D037820DA39CD003352A5 /* XhanceHttpUrl.m in Sources */,

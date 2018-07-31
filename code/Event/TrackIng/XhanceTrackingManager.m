@@ -7,7 +7,6 @@
 //
 
 #import "XhanceTrackingManager.h"
-#import <SafariServices/SafariServices.h>
 #import "NSMutableDictionary+XhanceCheckNullValue.h"
 #import "XhanceUtil.h"
 #import "XhanceRSA.h"
@@ -15,13 +14,12 @@
 #import "XhanceHttpUrl.h"
 #import "XhanceTrackingParameter.h"
 #import "XhanceDeeplinkManager.h"
+#import "XhanceTrackingSend.h"
 #import <iAd/iAd.h>
 
 #define IOS_IS_TRACKED @"ios_is_tracked"    // Has it been attributed
 
-@interface XhanceTrackingManager () <SFSafariViewControllerDelegate>
-{
-    int _trackingNumber;
+@interface XhanceTrackingManager () {
     
     NSString *_publicKey;   //RSA public key
     
@@ -29,6 +27,9 @@
     
     NSString *_aesKey;                              // Globally unique AES encryption key, randomly generated
     NSString *_aesEncodeKey;                        // str is _aesKey encryption to RSA
+    
+    XhanceTrackingSend *_advertiserTrackingSend;
+    XhanceTrackingSend *_adrealmTrackingSend;
 }
 @end
 
@@ -121,12 +122,15 @@ static XhanceTrackingManager *manager;
     NSString *trackDataStrForAdvertiser = _parameter.dataStrForAdvertiser;
     NSString *enString = [XhanceAES EnAESandBase64EnToString:trackDataStrForAdvertiser key:_aesKey];
     NSString *urlStr = [[XhanceHttpUrl shareInstance] getInstallUrlForAdvertiser];
-    NSString *jointParmeterUrlStr = [XhanceHttpUrl jointAdvertiserUrl:urlStr
-                                                         aesEncodeKey:_aesEncodeKey
-                                               enDataStrForAdvertiser:enString
-                                                       parameterModel:_parameter];
+    NSString *jointParameterUrlStr = [XhanceHttpUrl jointAdvertiserUrl:urlStr
+                                                          aesEncodeKey:_aesEncodeKey
+                                                enDataStrForAdvertiser:enString
+                                                        parameterModel:_parameter];
     
-    [self safariTrack:jointParmeterUrlStr];
+    _advertiserTrackingSend = [[XhanceTrackingSend alloc] init];
+    [_advertiserTrackingSend safariTrack:jointParameterUrlStr completion:^(BOOL didLoadSuccessfully) {
+        [self safari:jointParameterUrlStr didCompleteInitialLoad:didLoadSuccessfully];
+    }];
 }
 
 //Report to AdRealm
@@ -137,49 +141,23 @@ static XhanceTrackingManager *manager;
                                                   dataStrForAdRealm:trackDataStrForAdRealm
                                                      parameterModel:_parameter];
     
-    [self safariTrack:jointParameterUrlStr];
+    _adrealmTrackingSend = [[XhanceTrackingSend alloc] init];
+    [_adrealmTrackingSend safariTrack:jointParameterUrlStr completion:^(BOOL didLoadSuccessfully) {
+        [self safari:jointParameterUrlStr didCompleteInitialLoad:didLoadSuccessfully];
+    }];
 }
 
 #pragma mark - SafariTrackWithURL
 
-// iOS 9.0 or above，use SFSafariViewController cookie to track
-- (void)safariTrack:(NSString *)urlStr {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
-        if (rootVC == nil) {
-            //If rootVC is empty, it cannot be sent, and it will be retry after 5 seconds.
-            int time = 5;
-            dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC));
-            dispatch_after(delayTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                [self safariTrack:urlStr];
-            });
-            return;
-        }
-        
-        // creat SFSafariViewController get cookie, and track
-        SFSafariViewController *safariVC = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:urlStr]];
-        safariVC.title = urlStr;
-        safariVC.delegate = self;
-        
-        [rootVC addChildViewController:safariVC];
-        safariVC.view.frame = CGRectMake(100, 100, 0.1, 0.1);
-        safariVC.view.backgroundColor = [UIColor whiteColor];
-        [rootVC.view addSubview:safariVC.view];
-    });
-}
+- (void)safari:(NSString *)urlStr didCompleteInitialLoad:(BOOL)didLoadSuccessfully {
 
-#pragma mark - SFSafariViewControllerDelegate
-
-- (void)safariViewController:(SFSafariViewController *)controller didCompleteInitialLoad:(BOOL)didLoadSuccessfully {
-    NSString *urlStr = controller.title;
-    
     if (didLoadSuccessfully) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:IOS_IS_TRACKED];
-        [controller.view removeFromSuperview];
-        [controller removeFromParentViewController];
         
         #ifdef UPLTVXhanceSDKDEBUG
-            NSLog(@"[XhanceSDK Log] succeed:%@",urlStr);
+        NSLog(@"[XhanceSDK Log] Tracking succeed with url:%@",urlStr);
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"UPLTVXhanceSDKDEBUGTRACKSUCCEED"
+                                                            object:urlStr];
         #endif
         
         // Delay 1s to request Deeplink from the server
@@ -192,19 +170,11 @@ static XhanceTrackingManager *manager;
         });
     }
     else {
-        [controller.view removeFromSuperview];
-        [controller removeFromParentViewController];
-        
-        // max retry 3
-//        if (_trackingNumber < 3)
-//        {
-            //if failure, retry after 10 seconds
-            int time = 10;
-            dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC));
-            dispatch_after(delayTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                [self safariTrack:urlStr];
-            });
-//        }
+        #ifdef UPLTVXhanceSDKDEBUG
+        NSLog(@"[XhanceSDK Log] Tracking failure with url:%@",urlStr);
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"UPLTVXhanceSDKDEBUGTRACKFAILURE"
+                                                            object:urlStr];
+        #endif
     }
 }
 

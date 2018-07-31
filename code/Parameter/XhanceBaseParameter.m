@@ -19,16 +19,18 @@
 
 @implementation XhanceBaseParameter
 @synthesize timeStamp = _timeStamp;
+@synthesize uuid = _uuid;
 @synthesize dataForAdvertiser = _dataForAdvertiser;
 @synthesize dataForAdRealm = _dataForAdRealm;
 @synthesize dataStrForAdvertiser = _dataStrForAdvertiser;
 @synthesize dataStrForAdRealm = _dataStrForAdRealm;
 @synthesize baseParameterDic = _baseParameterDic;
 
-- (instancetype)initWithTimeStamp:(NSString *)timeStamp {
+- (instancetype)initWithTimeStamp:(NSString *)timeStamp uuid:(NSString *)uuid {
     self = [super init];
     if (self) {
         _timeStamp = [timeStamp copy];
+        _uuid = [uuid copy];
         [self createBaseParameter];
         _dataForAdvertiser = [[NSMutableDictionary alloc] init];
         _dataForAdRealm = [[NSMutableDictionary alloc] init];

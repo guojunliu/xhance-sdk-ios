@@ -16,6 +16,7 @@
 @interface XhanceBaseParameter : NSObject
 
 @property(nonatomic,copy) NSString *timeStamp;      //Timestamp, globally use this one to ensure that each API is unique
+@property(nonatomic,copy) NSString *uuid;           //Uuid after md5 encryption
 
 @property(nonatomic) NSMutableDictionary *dataForAdvertiser;    //Attribution data is sent to the advertiser
 @property(nonatomic) NSMutableDictionary *dataForAdRealm;       //Attribution summary data sent to the AdRealm
@@ -25,7 +26,7 @@
 
 @property(nonatomic) NSMutableDictionary *baseParameterDic;     //Common parameter map
 
-- (instancetype)initWithTimeStamp:(NSString *)timeStamp;
+- (instancetype)initWithTimeStamp:(NSString *)timeStamp uuid:(NSString *)uuid;
 
 - (void)createDataForAdvertiser;
 

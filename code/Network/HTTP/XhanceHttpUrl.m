@@ -137,6 +137,7 @@ static XhanceHttpUrl *manager;
                                          parameterModel:(XhanceBaseParameter *)parameterModel {
     
     NSString *ahs = [XhanceMd5Utils MD5OfString:[XhanceCpParameter shareinstance].appId];
+    NSString *uuid = parameterModel.uuid;
     
     //拼接参数
     NSMutableString *mStr = [[NSMutableString alloc] init];
@@ -159,6 +160,10 @@ static XhanceHttpUrl *manager;
     [mStr appendAndCheckString:@"d="];
     [mStr appendAndCheckString:enDataStrForAdvertiser];
     
+    [mStr appendAndCheckString:@"&"];
+    [mStr appendAndCheckString:@"uuid="];
+    [mStr appendAndCheckString:uuid];
+    
     NSString *str = mStr;
     
     return str;
@@ -166,6 +171,8 @@ static XhanceHttpUrl *manager;
 
 + (NSString *)getAdRealmParameterStrWithDataStrForAdRealm:(NSString *)dataStrForAdRealm
                                            parameterModel:(XhanceBaseParameter *)parameterModel {
+    
+    NSString *uuid = parameterModel.uuid;
     
     //拼接URL参数
     NSMutableString *mStr = [[NSMutableString alloc] init];
@@ -175,6 +182,10 @@ static XhanceHttpUrl *manager;
     [mStr appendAndCheckString:@"&"];
     [mStr appendAndCheckString:dataStrForAdRealm];
     //DataStrForAdRealm has been included in the CTS and ahs, so don't need to be repeated to add
+    
+    [mStr appendAndCheckString:@"&"];
+    [mStr appendAndCheckString:@"uuid="];
+    [mStr appendAndCheckString:uuid];
     
     NSString *str = mStr;
     

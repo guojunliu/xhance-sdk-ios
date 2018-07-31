@@ -17,8 +17,7 @@
 #define START_SESSION_MIN_INTERVAL  (300)
 #define END_SESSION_MIN_INTERVAL    (300)
 
-@interface XhanceSessionManager ()
-{
+@interface XhanceSessionManager () {
     NSString *_sessionId;
     NSTimer *_timer;
     NSDate *_lastStartSessionDate;
@@ -114,8 +113,10 @@ static XhanceSessionManager *manager;
     }
     
     _sessionId = [XhanceMd5Utils MD5OfString:[[NSUUID UUID] UUIDString]];
+    NSString *uuid = [XhanceMd5Utils MD5OfString:[NSUUID UUID].UUIDString];
     XhanceSessionModel *model = [[XhanceSessionModel alloc] initWithSessionId:_sessionId
-                                                                         type:XhanceSessionModelTypeStart];
+                                                                         type:XhanceSessionModelTypeStart
+                                                                         uuid:uuid];
     [self sendSession:model];
     
     _lastStartSessionDate = [NSDate date];
@@ -144,8 +145,10 @@ static XhanceSessionManager *manager;
     if (_sessionId == nil || [_sessionId isEqualToString:@""]) {
         _sessionId = [XhanceMd5Utils MD5OfString:[[NSUUID UUID] UUIDString]];
     }
+    NSString *uuid = [XhanceMd5Utils MD5OfString:[NSUUID UUID].UUIDString];
     XhanceSessionModel *model = [[XhanceSessionModel alloc] initWithSessionId:_sessionId
-                                                                         type:XhanceSessionModelTypeEnd];
+                                                                         type:XhanceSessionModelTypeEnd
+                                                                         uuid:uuid];
     [self sendSession:model];
     
     _lastEndSessionDate = [NSDate date];
@@ -163,8 +166,10 @@ static XhanceSessionManager *manager;
     if (_sessionId == nil || [_sessionId isEqualToString:@""]) {
         _sessionId = [XhanceMd5Utils MD5OfString:[[NSUUID UUID] UUIDString]];
     }
+    NSString *uuid = [XhanceMd5Utils MD5OfString:[NSUUID UUID].UUIDString];
     XhanceSessionModel *model = [[XhanceSessionModel alloc] initWithSessionId:_sessionId
-                                                                         type:XhanceSessionModelTypeTimer];
+                                                                         type:XhanceSessionModelTypeTimer
+                                                                         uuid:uuid];
     [self sendSession:model];
     
     _timer = [NSTimer timerWithTimeInterval:TIMER_SESSION_INTERVAL

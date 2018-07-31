@@ -20,7 +20,9 @@ typedef NS_ENUM (NSInteger, XhanceSessionModelType) {
 @property (nonatomic,copy) NSDate *clientTime;
 @property (nonatomic) XhanceSessionModelType dataType;
 
-- (instancetype)initWithSessionId:(NSString *)sessionId type:(XhanceSessionModelType)tyep;
+@property (nonatomic,copy) NSString *uuid;
+
+- (instancetype)initWithSessionId:(NSString *)sessionId type:(XhanceSessionModelType)type uuid:(NSString *)uuid;
 
 #pragma mark - Util
 

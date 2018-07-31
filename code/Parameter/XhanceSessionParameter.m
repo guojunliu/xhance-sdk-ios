@@ -18,7 +18,8 @@
 
 - (instancetype)initWithSession:(XhanceSessionModel *)session {
     NSString *timeStamp = [XhanceUtil getDateTimeStampWithDate:session.clientTime];
-    self = [super initWithTimeStamp:timeStamp];
+    NSString *uuid = session.uuid;
+    self = [super initWithTimeStamp:timeStamp uuid:uuid];
     if (self) {
         _session = session;
         [self createDataForAdvertiser];
