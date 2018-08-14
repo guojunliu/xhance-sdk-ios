@@ -74,6 +74,7 @@ static XhanceTrackingManager *manager;
         // Has been tracked
         return;
     }
+    NSLog(@"[XhanceSDK Log] Untracked, will tracking");
     
     double version = [[UIDevice currentDevice].systemVersion doubleValue];
     if (version < 9.0f) {

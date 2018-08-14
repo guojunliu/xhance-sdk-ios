@@ -19,6 +19,7 @@ typedef void (^XhanceTrackingSendBlock)(BOOL didLoadSuccessfully);
     
     int _trackingSendRetryNumber;
     XhanceTrackingSendBlock _completionBlock;
+    NSString *_urlStr;
 }
 @end
 
@@ -37,6 +38,7 @@ typedef void (^XhanceTrackingSendBlock)(BOOL didLoadSuccessfully);
 // iOS 9.0 or above，use SFSafariViewController cookie to track
 - (void)safariTrack:(NSString *)urlStr completion:(void (^)(BOOL didLoadSuccessfully))completionBlock {
     
+    _urlStr = [urlStr copy];
     _completionBlock = [completionBlock copy];
     
     [self safariTrack:urlStr];
@@ -45,7 +47,8 @@ typedef void (^XhanceTrackingSendBlock)(BOOL didLoadSuccessfully);
 - (void)safariTrack:(NSString *)urlStr {
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+        // UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+        UIViewController *rootVC = [self getRootViewController];
         if (rootVC == nil) {
             //If rootVC is empty, it cannot be sent, and it will be retry after 5 seconds.
             int time = 5;
@@ -58,7 +61,6 @@ typedef void (^XhanceTrackingSendBlock)(BOOL didLoadSuccessfully);
         
         // creat SFSafariViewController get cookie, and track
         SFSafariViewController *safariVC = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:urlStr]];
-        safariVC.title = urlStr;
         safariVC.delegate = self;
         safariVC.view.tag = 1;
         
@@ -66,13 +68,52 @@ typedef void (^XhanceTrackingSendBlock)(BOOL didLoadSuccessfully);
         safariVC.view.frame = CGRectMake(100, 100, 0.1, 0.1);
         safariVC.view.backgroundColor = [UIColor whiteColor];
         [rootVC.view addSubview:safariVC.view];
+        
+        #ifdef UPLTVXhanceSDKDEBUG
+        NSLog(@"[XhanceSDK Log] safari view controller will show with url:%@",urlStr);
+        #endif
     });
+}
+
+- (UIViewController *)getRootViewController {
+    UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    if (rootVC == nil) {
+        return nil;
+    }
+    return [self getViewController:rootVC];
+}
+
+- (UIViewController *)getViewController:(UIViewController *)rootVC {
+    if (rootVC == nil) {
+        return nil;
+    }
+    
+    if ([rootVC isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *rootBarVC = (UITabBarController *)rootVC;
+        NSArray *vcArr = rootBarVC.viewControllers;
+        if (vcArr == nil || vcArr.count <= 0) {
+            return nil;
+        }
+        UIViewController *vc = [vcArr objectAtIndex:0];
+        return [self getViewController:vc];
+    }
+    if ([rootVC isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *rootNavVC = (UINavigationController *)rootVC;
+        UIViewController *vc = rootNavVC.visibleViewController;
+        return [self getViewController:vc];
+    }
+    
+    if ([rootVC isKindOfClass:[UIViewController class]]) {
+        return rootVC;
+    }
+    
+    return rootVC;
 }
 
 #pragma mark - SFSafariViewControllerDelegate
 
 - (void)safariViewController:(SFSafariViewController *)controller didCompleteInitialLoad:(BOOL)didLoadSuccessfully {
-    NSString *urlStr = controller.title;
+    NSString *urlStr = _urlStr;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         

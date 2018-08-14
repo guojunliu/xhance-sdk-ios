@@ -6,4 +6,4 @@
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
-#define XhanceSDK_VERSION @"1007"
+#define XhanceSDK_VERSION @"1008"

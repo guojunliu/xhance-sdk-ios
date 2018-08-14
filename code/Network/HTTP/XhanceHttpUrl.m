@@ -7,7 +7,8 @@
 //
 
 //#define IOS_TRACKING_URL_Domain         @"https://track-digest-test.adrealm.com"    //The digest data sending address  Test
-#define IOS_TRACKING_URL_Domain         @"https://track-digest.adrealm.com"       //The digest data sending address  Formal
+//#define IOS_TRACKING_URL_Domain         @"https://track-digest.adrealm.com"       //The digest data sending address  Old Formal
+#define IOS_TRACKING_URL_Domain         @"https://digest-track.xhance.io"       //The digest data sending address  Formal
 #define IOS_TRACKING_URL_Path_INSTALL   @"install"
 #define IOS_TRACKING_URL_Path_EVENT     @"event"
 #define IOS_Deeplink_URL_Path_DEEPLINK  @"dl"
