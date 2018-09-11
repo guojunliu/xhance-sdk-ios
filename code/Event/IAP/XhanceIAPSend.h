@@ -2,7 +2,7 @@
 //  XhanceIAPSend.h
 //  XhanceSDK
 //
-//  Created by steve on 2018/5/31.
+//  Created by liuguojun on 2018/5/31.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -11,8 +11,8 @@
 
 @interface XhanceIAPSend : NSObject
 
-+ (void)sendAdvertiserIAP:(XhanceIAPParameter *)iapParameter;
++ (void)sendAdvertiserIAP:(XhanceIAPModel *)iapModel;
 
-+ (void)sendAdRealmIAP:(XhanceIAPParameter *)iapParameter;
++ (void)sendAdRealmIAP:(XhanceIAPModel *)iapModel;
 
 @end

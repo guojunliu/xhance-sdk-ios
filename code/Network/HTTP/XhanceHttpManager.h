@@ -2,7 +2,7 @@
 //  XhanceHttpManager.h
 //  XhanceSDK
 //
-//  Created by steve on 2018/4/12.
+//  Created by liuguojun on 2018/4/12.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -43,5 +43,17 @@
          retryCount:(int)retryCount
          completion:(void (^)(id responseObject))completionBlock
               error:(void (^)(NSError *error))errorBlock;
+
+#pragma mark - CustomEvent
+
++ (void)sendCustomEventForAdvertiser:(NSString *)url
+                          retryCount:(int)retryCount
+                          completion:(void (^)(id responseObject))completionBlock
+                               error:(void (^)(NSError *error))errorBlock;
+
++ (void)sendCustomEventForAdRealm:(NSString *)url
+                       retryCount:(int)retryCount
+                       completion:(void (^)(id responseObject))completionBlock
+                            error:(void (^)(NSError *error))errorBlock;
 
 @end

@@ -42,6 +42,14 @@
     [button3 setTitle:@"ThirdPay" forState:UIControlStateNormal];
     [button3 addTarget:self action:@selector(thirdPayClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button3];
+    
+    UIButton *button4 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button4.backgroundColor = [UIColor colorWithRed:254/255.0 green:208/255.0 blue:48/255.0 alpha:1];
+    button4.layer.cornerRadius = 10;
+    button4.frame = CGRectMake(self.view.frame.size.width/2 - 250/2, 310, 250, 40);
+    [button4 setTitle:@"CustomEvent" forState:UIControlStateNormal];
+    [button4 addTarget:self action:@selector(customEventClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button4];
 }
 
 - (void)getDeeplinkClick {
@@ -73,6 +81,22 @@
                     productCurrencyCode:productCurrencyCode
                       productIdentifier:productIdentifier
                         productCategory:productCategory];
+}
+
+- (void)customEventClick {
+    [XhanceSDK customEventWithKey:@"testStrKey" stringValue:@"testStrValue"];
+    
+    NSArray *arr = [[NSArray alloc] initWithObjects:
+                    @"testArrayValue1",
+                    @"testArrayValue2",
+                    @"testArrayValue3", nil];
+    [XhanceSDK customEventWithKey:@"testArrayKey" arrayValue:arr];
+    
+    NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:
+                         @"testMapKey1",@"testMapValue1",
+                         @"testMapKey2",@"testMapValue2",
+                         @"testMapKey3",@"testMapValue3",nil];
+    [XhanceSDK customEventWithKey:@"testMapKey" dictionaryValue:dic];
 }
 
 @end

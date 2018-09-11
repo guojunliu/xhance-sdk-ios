@@ -2,7 +2,7 @@
 //  XhanceIAPParameter.m
 //  XhanceSDK
 //
-//  Created by steve on 2018/5/29.
+//  Created by liuguojun on 2018/5/29.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -10,37 +10,21 @@
 #import "XhanceSessionManager.h"
 #import "XhanceUtil.h"
 
-@implementation XhanceIAPParameter
-@synthesize productPrice = _productPrice;
-@synthesize productCurrencyCode = _productCurrencyCode;
-@synthesize productIdentifier = _productIdentifier;
-@synthesize productCategory = _productCategory;
-@synthesize receiptDataString = _receiptDataString;
-@synthesize pubkey = _pubkey;
-@synthesize params = _params;
+@interface XhanceIAPParameter ()
+{
+    XhanceIAPModel *_model;
+}
+@end
 
-- (instancetype)initWithProductPrice:(NSNumber *)productPrice
-                 productCurrencyCode:(NSString *)productCurrencyCode
-                   productIdentifier:(NSString *)productIdentifier
-                     productCategory:(NSString *)productCategory
-                   receiptDataString:(NSString *)receiptDataString
-                              pubkey:(NSString *)pubkey
-                              params:(NSDictionary *)params
-                          isThirdPay:(BOOL)isThirdPay {
-    
-    NSString *timeStamp = [XhanceUtil getDateTimeStamp];
-    NSString *uuid = [XhanceMd5Utils MD5OfString:[NSUUID UUID].UUIDString];
+@implementation XhanceIAPParameter
+
+- (instancetype)initWithIAPModel:(XhanceIAPModel *)model {
+    NSString *timeStamp = [XhanceUtil getDateTimeStampWithDate:model.timeStamp];
+    NSString *uuid = model.uuid;
     self = [super initWithTimeStamp:timeStamp uuid:uuid];
     if (self) {
-        self.productPrice = productPrice;
-        self.productCurrencyCode = productCurrencyCode;
-        self.productIdentifier = productIdentifier;
-        self.productCategory = productCategory;
-        self.receiptDataString = receiptDataString;
-        self.pubkey = pubkey;
-        self.params = params;
-        
-        if (isThirdPay) {
+        _model = model;
+        if (model.isThirdPay) {
             [self createDataForAdvertiserWithThirdPay];
         }
         else {
@@ -54,8 +38,8 @@
 
 - (void)createDataForAdvertiserWithAppStore {
     NSString *paramsStr = @"";
-    if (_params) {
-        paramsStr = [XhanceUtil dictionaryToJson:_params];
+    if (_model.params) {
+        paramsStr = [XhanceUtil dictionaryToJson:_model.params];
         if (paramsStr != nil && ![paramsStr isEqualToString:@""]) {
             NSString *str = [XhanceUtil URLEncodedString:paramsStr];
             paramsStr = str;
@@ -63,18 +47,18 @@
     }
     
     /*
-     @param cat Short name of category, indicating the classification of events, session cate=session
+     @param cat Short name of category, indicating the classification of events, session cat=revenue_verify
      @param revn Revenue in-app purchases, the unit is the amount, the type is long
      @param revn_curr Revenue_currency Abbreviation for the currency of the purchase of the purchase, three uppercase English characters
      @param pubkey If it is Android, pass the payment public key of gp, if it is ios, pass the shared key.
      @param sign If it is Android, the signature verification returned after gp payment, if it is ios, it will receive receipt
      @param params Json type, cp is set according to map
      */
-    NSString *cat = @"revenue";
-    NSNumber *revn = _productPrice;
-    NSString *revn_curr = _productCurrencyCode;
-    NSString *pubkey = _pubkey;
-    NSString *sign = _receiptDataString;
+    NSString *cat = @"revenue_verify";
+    NSNumber *revn = _model.productPrice;
+    NSString *revn_curr = _model.productCurrencyCode;
+    NSString *pubkey = _model.pubkey;
+    NSString *sign = _model.receiptDataString;
     NSString *params = paramsStr;
     
     // set IAP parameters
@@ -91,17 +75,17 @@
 - (void)createDataForAdvertiserWithThirdPay {
     
     /*
-     @param cat Short name of category, indicating the classification of events, revenue cate=revenue
+     @param cat Short name of category, indicating the classification of events, revenue cat=revenue
      @param revn Revenue in-app purchases, the unit is the amount, the type is long
      @param revn_curr Revenue_currency Abbreviation for the currency of the purchase of the purchase, three uppercase English characters
      @param item_id The id mark of the goods purchased by the in-app purchase
      @param item_cat Classification of goods purchased by pay-per-use
      */
     NSString *cat = @"revenue";
-    NSNumber *revn = _productPrice;
-    NSString *revn_curr = _productCurrencyCode;
-    NSString *item_id = _productIdentifier;
-    NSString *item_cat = _productCategory;
+    NSNumber *revn = _model.productPrice;
+    NSString *revn_curr = _model.productCurrencyCode;
+    NSString *item_id = _model.productIdentifier;
+    NSString *item_cat = _model.productCategory;
     
     // set IAP parameters
     [self.dataForAdvertiser setCheckObject:cat forKey:@"cat"];

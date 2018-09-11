@@ -2,7 +2,7 @@
 //  XhanceParameter.m
 //  XhanceSDK
 //
-//  Created by steve on 2018/5/17.
+//  Created by liuguojun on 2018/5/17.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -10,18 +10,18 @@
 
 @interface XhanceSessionParameter ()
 {
-    XhanceSessionModel *_session;
+    XhanceSessionModel *_model;
 }
 @end
 
 @implementation XhanceSessionParameter
 
-- (instancetype)initWithSession:(XhanceSessionModel *)session {
-    NSString *timeStamp = [XhanceUtil getDateTimeStampWithDate:session.clientTime];
-    NSString *uuid = session.uuid;
+- (instancetype)initWithSession:(XhanceSessionModel *)model {
+    NSString *timeStamp = [XhanceUtil getDateTimeStampWithDate:model.timeStamp];
+    NSString *uuid = model.uuid;
     self = [super initWithTimeStamp:timeStamp uuid:uuid];
     if (self) {
-        _session = session;
+        _model = model;
         [self createDataForAdvertiser];
         [self createDataForAdRealm];
     }
@@ -32,19 +32,19 @@
     
     /*
      @param s_id Abbreviation for session_id
-     @param cat Short name of category, indicating the classification of events, session cate=session
+     @param cat Short name of category, indicating the classification of events, session cat=session
      @param e_id The short name of event_id indicates the name of the event.
             The e_id enumeration type of the session consists of three types: s_start, s_end, s_going.
      @param val Abbreviation of value, indicating the value of the event, the session does not need to pass, it is empty
      */
-    NSString *s_id = _session.sessionID;
+    NSString *s_id = _model.sessionID;
     NSString *cat = @"session";
     NSString *e_id = @"";
-    if (_session.dataType == XhanceSessionModelTypeStart) {
+    if (_model.dataType == XhanceSessionModelTypeStart) {
         e_id = @"s_start";
-    } else if (_session.dataType == XhanceSessionModelTypeTimer) {
+    } else if (_model.dataType == XhanceSessionModelTypeTimer) {
         e_id = @"s_going";
-    } else if (_session.dataType == XhanceSessionModelTypeEnd) {
+    } else if (_model.dataType == XhanceSessionModelTypeEnd) {
         e_id = @"s_end";
     }
     NSString *val = @"";

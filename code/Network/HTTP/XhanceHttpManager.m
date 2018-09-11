@@ -2,7 +2,7 @@
 //  XhanceHttpManager.m
 //  XhanceSDK
 //
-//  Created by steve on 2018/4/12.
+//  Created by liuguojun on 2018/4/12.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -133,6 +133,54 @@
                        retryCount:retryCount + 1
                        completion:completionBlock
                             error:errorBlock];
+            });
+        }
+        else {
+            errorBlock(error);
+        }
+    }];
+}
+
+#pragma mark - CustomEvent
+
++ (void)sendCustomEventForAdvertiser:(NSString *)url
+                      retryCount:(int)retryCount
+                      completion:(void (^)(id responseObject))completionBlock
+                           error:(void (^)(NSError *error))errorBlock {
+    
+    [XhanceHttpSession HTTPPostWithUrl:url completion:^(id responseObject) {
+        completionBlock(responseObject);
+    } error:^(NSError *error) {
+        if (retryCount <= K_RETRY_MAX_COUNT) {
+            dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(K_RETRY_DELAY_TIME * NSEC_PER_SEC));
+            dispatch_after(delayTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self sendCustomEventForAdvertiser:url
+                                        retryCount:retryCount + 1
+                                        completion:completionBlock
+                                             error:errorBlock];
+            });
+        }
+        else {
+            errorBlock(error);
+        }
+    }];
+}
+
++ (void)sendCustomEventForAdRealm:(NSString *)url
+                   retryCount:(int)retryCount
+                   completion:(void (^)(id responseObject))completionBlock
+                        error:(void (^)(NSError *error))errorBlock {
+    
+    [XhanceHttpSession HTTPPostWithUrl:url completion:^(id responseObject) {
+        completionBlock(responseObject);
+    } error:^(NSError *error) {
+        if (retryCount <= K_RETRY_MAX_COUNT) {
+            dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(K_RETRY_DELAY_TIME * NSEC_PER_SEC));
+            dispatch_after(delayTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self sendCustomEventForAdRealm:url
+                                     retryCount:retryCount + 1
+                                     completion:completionBlock
+                                          error:errorBlock];
             });
         }
         else {

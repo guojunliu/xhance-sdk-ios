@@ -2,7 +2,7 @@
 //  XhanceTrackingSend.m
 //  XhanceSDK
 //
-//  Created by steve on 2018/7/30.
+//  Created by liuguojun on 2018/7/30.
 //  Copyright © 2018年 Adrealm. All rights reserved.
 //
 

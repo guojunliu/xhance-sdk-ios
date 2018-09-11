@@ -2,11 +2,12 @@
 //  XhanceSessionModel.h
 //  XhanceSDK
 //
-//  Created by steve on 2018/5/14.
+//  Created by liuguojun on 2018/5/14.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "XhanceBaseModel.h"
 
 typedef NS_ENUM (NSInteger, XhanceSessionModelType) {
     XhanceSessionModelTypeStart = 0,
@@ -14,13 +15,10 @@ typedef NS_ENUM (NSInteger, XhanceSessionModelType) {
     XhanceSessionModelTypeEnd = 2,
 };
 
-@interface XhanceSessionModel : NSObject
+@interface XhanceSessionModel : XhanceBaseModel
 
 @property (nonatomic,copy) NSString *sessionID;
-@property (nonatomic,copy) NSDate *clientTime;
 @property (nonatomic) XhanceSessionModelType dataType;
-
-@property (nonatomic,copy) NSString *uuid;
 
 - (instancetype)initWithSessionId:(NSString *)sessionId type:(XhanceSessionModelType)type uuid:(NSString *)uuid;
 

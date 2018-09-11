@@ -12,38 +12,45 @@
 		AA05D3C8207F0D0800D15153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA05D3C7207F0D0800D15153 /* Assets.xcassets */; };
 		AA05D3CB207F0D0800D15153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA05D3C9207F0D0800D15153 /* LaunchScreen.storyboard */; };
 		AA05D3CE207F0D0800D15153 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA05D3CD207F0D0800D15153 /* main.m */; };
-		AA48DCA4211012E000621BA4 /* XhanceTrackingSend.m in Sources */ = {isa = PBXBuildFile; fileRef = AA48DCA3211012DF00621BA4 /* XhanceTrackingSend.m */; };
-		AA4D037420DA39CD003352A5 /* XhanceNetConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D032B20DA39CD003352A5 /* XhanceNetConnectionManager.m */; };
-		AA4D037520DA39CD003352A5 /* XhanceNetReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D032C20DA39CD003352A5 /* XhanceNetReachability.m */; };
-		AA4D037620DA39CD003352A5 /* XhanceHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D033020DA39CD003352A5 /* XhanceHttpManager.m */; };
-		AA4D037720DA39CD003352A5 /* XhanceHttpSession.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D033120DA39CD003352A5 /* XhanceHttpSession.m */; };
-		AA4D037820DA39CD003352A5 /* XhanceHttpUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D033320DA39CD003352A5 /* XhanceHttpUrl.m */; };
-		AA4D037920DA39CD003352A5 /* XhanceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D033620DA39CD003352A5 /* XhanceUtil.m */; };
-		AA4D037A20DA39CD003352A5 /* XhanceMd5Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D033720DA39CD003352A5 /* XhanceMd5Utils.m */; };
-		AA4D037B20DA39CD003352A5 /* XhanceStatisticalKeychainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D033D20DA39CD003352A5 /* XhanceStatisticalKeychainHelper.m */; };
-		AA4D037C20DA39CD003352A5 /* XhanceStatisticalKeychainDeviceID.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D033F20DA39CD003352A5 /* XhanceStatisticalKeychainDeviceID.m */; };
-		AA4D037D20DA39CD003352A5 /* XhanceStatisticalSimulateIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D034120DA39CD003352A5 /* XhanceStatisticalSimulateIDFA.m */; };
-		AA4D037F20DA39CD003352A5 /* XhanceRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D034720DA39CD003352A5 /* XhanceRSA.m */; };
-		AA4D038020DA39CD003352A5 /* XhanceAES.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D034A20DA39CD003352A5 /* XhanceAES.m */; };
-		AA4D038120DA39CD003352A5 /* XhanceFBEncryptorAES.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D034B20DA39CD003352A5 /* XhanceFBEncryptorAES.m */; };
-		AA4D038220DA39CD003352A5 /* XhanceSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D034F20DA39CD003352A5 /* XhanceSDK.m */; };
-		AA4D038320DA39CD003352A5 /* XhanceIAPParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D035320DA39CD003352A5 /* XhanceIAPParameter.m */; };
-		AA4D038420DA39CD003352A5 /* XhanceTrackingParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D035420DA39CD003352A5 /* XhanceTrackingParameter.m */; };
-		AA4D038520DA39CD003352A5 /* XhanceSessionParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D035520DA39CD003352A5 /* XhanceSessionParameter.m */; };
-		AA4D038620DA39CD003352A5 /* XhanceBaseParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D035620DA39CD003352A5 /* XhanceBaseParameter.m */; };
-		AA4D038720DA39CD003352A5 /* XhanceCpParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D035B20DA39CD003352A5 /* XhanceCpParameter.m */; };
-		AA4D038820DA39CD003352A5 /* XhanceIAPSend.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D035F20DA39CD003352A5 /* XhanceIAPSend.m */; };
-		AA4D038920DA39CD003352A5 /* XhanceIAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D036220DA39CD003352A5 /* XhanceIAPManager.m */; };
-		AA4D038A20DA39CD003352A5 /* XhanceTrackingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D036420DA39CD003352A5 /* XhanceTrackingManager.m */; };
-		AA4D038B20DA39CD003352A5 /* XhanceSessionFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D036720DA39CD003352A5 /* XhanceSessionFileCache.m */; };
-		AA4D038C20DA39CD003352A5 /* XhanceSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D036B20DA39CD003352A5 /* XhanceSessionManager.m */; };
-		AA4D038D20DA39CD003352A5 /* XhanceSessionSend.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D036C20DA39CD003352A5 /* XhanceSessionSend.m */; };
-		AA4D038E20DA39CD003352A5 /* XhanceSessionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D036E20DA39CD003352A5 /* XhanceSessionModel.m */; };
-		AA4D038F20DA39CD003352A5 /* XhanceDeeplinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D037020DA39CD003352A5 /* XhanceDeeplinkModel.m */; };
-		AA4D039020DA39CD003352A5 /* XhanceDeeplinkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D037320DA39CD003352A5 /* XhanceDeeplinkManager.m */; };
-		AA6DFE5920E6185E00A7F0C4 /* XhanceBase64Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6DFE5820E6185E00A7F0C4 /* XhanceBase64Utils.m */; };
-		AA99555420DA4A9500F762D2 /* NSMutableDictionary+XhanceCheckNullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AA99555020DA4A9500F762D2 /* NSMutableDictionary+XhanceCheckNullValue.m */; };
-		AA99555520DA4A9500F762D2 /* NSMutableString+XhanceCheckNullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AA99555320DA4A9500F762D2 /* NSMutableString+XhanceCheckNullValue.m */; };
+		AA7387BA21475C81006F5F86 /* XhanceNetReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73875021475C81006F5F86 /* XhanceNetReachability.m */; };
+		AA7387BB21475C81006F5F86 /* XhanceNetConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73875221475C81006F5F86 /* XhanceNetConnectionManager.m */; };
+		AA7387BC21475C81006F5F86 /* XhanceHttpSession.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73875521475C81006F5F86 /* XhanceHttpSession.m */; };
+		AA7387BD21475C81006F5F86 /* XhanceHttpUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73875721475C81006F5F86 /* XhanceHttpUrl.m */; };
+		AA7387BE21475C81006F5F86 /* XhanceHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73875921475C81006F5F86 /* XhanceHttpManager.m */; };
+		AA7387BF21475C81006F5F86 /* XhanceBase64Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73875C21475C81006F5F86 /* XhanceBase64Utils.m */; };
+		AA7387C021475C81006F5F86 /* XhanceMd5Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73876021475C81006F5F86 /* XhanceMd5Utils.m */; };
+		AA7387C121475C81006F5F86 /* XhanceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73876121475C81006F5F86 /* XhanceUtil.m */; };
+		AA7387C221475C81006F5F86 /* XhanceFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73876421475C81006F5F86 /* XhanceFileCache.m */; };
+		AA7387C321475C81006F5F86 /* XhanceSessionFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73876521475C81006F5F86 /* XhanceSessionFileCache.m */; };
+		AA7387C421475C81006F5F86 /* XhanceIAPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73876B21475C81006F5F86 /* XhanceIAPModel.m */; };
+		AA7387C521475C81006F5F86 /* XhanceCustomEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73876E21475C81006F5F86 /* XhanceCustomEventModel.m */; };
+		AA7387C621475C81006F5F86 /* XhanceBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73877021475C81006F5F86 /* XhanceBaseModel.m */; };
+		AA7387C721475C81006F5F86 /* XhanceSessionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73877321475C81006F5F86 /* XhanceSessionModel.m */; };
+		AA7387C821475C81006F5F86 /* XhanceStatisticalKeychainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73877921475C81006F5F86 /* XhanceStatisticalKeychainHelper.m */; };
+		AA7387C921475C81006F5F86 /* XhanceStatisticalKeychainDeviceID.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73877A21475C81006F5F86 /* XhanceStatisticalKeychainDeviceID.m */; };
+		AA7387CA21475C81006F5F86 /* XhanceStatisticalSimulateIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73877D21475C81006F5F86 /* XhanceStatisticalSimulateIDFA.m */; };
+		AA7387CB21475C81006F5F86 /* NSMutableDictionary+XhanceCheckNullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73877F21475C81006F5F86 /* NSMutableDictionary+XhanceCheckNullValue.m */; };
+		AA7387CC21475C81006F5F86 /* NSMutableString+XhanceCheckNullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73878221475C81006F5F86 /* NSMutableString+XhanceCheckNullValue.m */; };
+		AA7387CD21475C81006F5F86 /* XhanceRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73878521475C81006F5F86 /* XhanceRSA.m */; };
+		AA7387CE21475C81006F5F86 /* XhanceFBEncryptorAES.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73878721475C81006F5F86 /* XhanceFBEncryptorAES.m */; };
+		AA7387CF21475C81006F5F86 /* XhanceAES.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73878A21475C81006F5F86 /* XhanceAES.m */; };
+		AA7387D021475C81006F5F86 /* XhanceSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73878E21475C81006F5F86 /* XhanceSDK.m */; };
+		AA7387D121475C81006F5F86 /* XhanceCpParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73879121475C81006F5F86 /* XhanceCpParameter.m */; };
+		AA7387D221475C81006F5F86 /* XhanceIAPParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73879321475C81006F5F86 /* XhanceIAPParameter.m */; };
+		AA7387D321475C81006F5F86 /* XhanceCustomEventParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73879721475C81006F5F86 /* XhanceCustomEventParameter.m */; };
+		AA7387D421475C81006F5F86 /* XhanceTrackingParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73879921475C81006F5F86 /* XhanceTrackingParameter.m */; };
+		AA7387D521475C81006F5F86 /* XhanceBaseParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73879B21475C81006F5F86 /* XhanceBaseParameter.m */; };
+		AA7387D621475C81006F5F86 /* XhanceSessionParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73879F21475C81006F5F86 /* XhanceSessionParameter.m */; };
+		AA7387D721475C81006F5F86 /* XhanceIAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7387A221475C81006F5F86 /* XhanceIAPManager.m */; };
+		AA7387D821475C81006F5F86 /* XhanceIAPSend.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7387A421475C81006F5F86 /* XhanceIAPSend.m */; };
+		AA7387D921475C81006F5F86 /* XhanceCustomEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7387A921475C81006F5F86 /* XhanceCustomEventManager.m */; };
+		AA7387DA21475C81006F5F86 /* XhanceCustomEventSend.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7387AA21475C81006F5F86 /* XhanceCustomEventSend.m */; };
+		AA7387DB21475C81006F5F86 /* XhanceTrackingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7387AE21475C81006F5F86 /* XhanceTrackingManager.m */; };
+		AA7387DC21475C81006F5F86 /* XhanceTrackingSend.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7387AF21475C81006F5F86 /* XhanceTrackingSend.m */; };
+		AA7387DD21475C81006F5F86 /* XhanceDeeplinkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7387B221475C81006F5F86 /* XhanceDeeplinkManager.m */; };
+		AA7387DE21475C81006F5F86 /* XhanceDeeplinkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7387B321475C81006F5F86 /* XhanceDeeplinkModel.m */; };
+		AA7387DF21475C81006F5F86 /* XhanceSessionSend.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7387B621475C81006F5F86 /* XhanceSessionSend.m */; };
+		AA7387E021475C81006F5F86 /* XhanceSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7387B921475C81006F5F86 /* XhanceSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,71 +63,85 @@
 		AA05D3CA207F0D0800D15153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA05D3CC207F0D0800D15153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA05D3CD207F0D0800D15153 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AA48DCA2211012DF00621BA4 /* XhanceTrackingSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceTrackingSend.h; sourceTree = "<group>"; };
-		AA48DCA3211012DF00621BA4 /* XhanceTrackingSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceTrackingSend.m; sourceTree = "<group>"; };
-		AA4D032920DA39CD003352A5 /* XhanceNetConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceNetConnectionManager.h; sourceTree = "<group>"; };
-		AA4D032A20DA39CD003352A5 /* XhanceNetReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceNetReachability.h; sourceTree = "<group>"; };
-		AA4D032B20DA39CD003352A5 /* XhanceNetConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceNetConnectionManager.m; sourceTree = "<group>"; };
-		AA4D032C20DA39CD003352A5 /* XhanceNetReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceNetReachability.m; sourceTree = "<group>"; };
-		AA4D032E20DA39CD003352A5 /* XhanceHttpSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceHttpSession.h; sourceTree = "<group>"; };
-		AA4D032F20DA39CD003352A5 /* XhanceHttpUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceHttpUrl.h; sourceTree = "<group>"; };
-		AA4D033020DA39CD003352A5 /* XhanceHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceHttpManager.m; sourceTree = "<group>"; };
-		AA4D033120DA39CD003352A5 /* XhanceHttpSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceHttpSession.m; sourceTree = "<group>"; };
-		AA4D033220DA39CD003352A5 /* XhanceHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceHttpManager.h; sourceTree = "<group>"; };
-		AA4D033320DA39CD003352A5 /* XhanceHttpUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceHttpUrl.m; sourceTree = "<group>"; };
-		AA4D033520DA39CD003352A5 /* XhanceMd5Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceMd5Utils.h; sourceTree = "<group>"; };
-		AA4D033620DA39CD003352A5 /* XhanceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceUtil.m; sourceTree = "<group>"; };
-		AA4D033720DA39CD003352A5 /* XhanceMd5Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceMd5Utils.m; sourceTree = "<group>"; };
-		AA4D033820DA39CD003352A5 /* XhanceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceUtil.h; sourceTree = "<group>"; };
-		AA4D033C20DA39CD003352A5 /* XhanceStatisticalKeychainDeviceID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceStatisticalKeychainDeviceID.h; sourceTree = "<group>"; };
-		AA4D033D20DA39CD003352A5 /* XhanceStatisticalKeychainHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceStatisticalKeychainHelper.m; sourceTree = "<group>"; };
-		AA4D033E20DA39CD003352A5 /* XhanceStatisticalKeychainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceStatisticalKeychainHelper.h; sourceTree = "<group>"; };
-		AA4D033F20DA39CD003352A5 /* XhanceStatisticalKeychainDeviceID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceStatisticalKeychainDeviceID.m; sourceTree = "<group>"; };
-		AA4D034120DA39CD003352A5 /* XhanceStatisticalSimulateIDFA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceStatisticalSimulateIDFA.m; sourceTree = "<group>"; };
-		AA4D034220DA39CD003352A5 /* XhanceStatisticalSimulateIDFA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceStatisticalSimulateIDFA.h; sourceTree = "<group>"; };
-		AA4D034720DA39CD003352A5 /* XhanceRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceRSA.m; sourceTree = "<group>"; };
-		AA4D034820DA39CD003352A5 /* XhanceRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceRSA.h; sourceTree = "<group>"; };
-		AA4D034A20DA39CD003352A5 /* XhanceAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceAES.m; sourceTree = "<group>"; };
-		AA4D034B20DA39CD003352A5 /* XhanceFBEncryptorAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceFBEncryptorAES.m; sourceTree = "<group>"; };
-		AA4D034C20DA39CD003352A5 /* XhanceAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceAES.h; sourceTree = "<group>"; };
-		AA4D034D20DA39CD003352A5 /* XhanceFBEncryptorAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceFBEncryptorAES.h; sourceTree = "<group>"; };
-		AA4D034F20DA39CD003352A5 /* XhanceSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSDK.m; sourceTree = "<group>"; };
-		AA4D035020DA39CD003352A5 /* XhanceSDKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSDKVersion.h; sourceTree = "<group>"; };
-		AA4D035120DA39CD003352A5 /* XhanceSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSDK.h; sourceTree = "<group>"; };
-		AA4D035320DA39CD003352A5 /* XhanceIAPParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceIAPParameter.m; sourceTree = "<group>"; };
-		AA4D035420DA39CD003352A5 /* XhanceTrackingParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceTrackingParameter.m; sourceTree = "<group>"; };
-		AA4D035520DA39CD003352A5 /* XhanceSessionParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSessionParameter.m; sourceTree = "<group>"; };
-		AA4D035620DA39CD003352A5 /* XhanceBaseParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceBaseParameter.m; sourceTree = "<group>"; };
-		AA4D035720DA39CD003352A5 /* XhanceCpParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceCpParameter.h; sourceTree = "<group>"; };
-		AA4D035820DA39CD003352A5 /* XhanceIAPParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceIAPParameter.h; sourceTree = "<group>"; };
-		AA4D035920DA39CD003352A5 /* XhanceTrackingParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceTrackingParameter.h; sourceTree = "<group>"; };
-		AA4D035A20DA39CD003352A5 /* XhanceSessionParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSessionParameter.h; sourceTree = "<group>"; };
-		AA4D035B20DA39CD003352A5 /* XhanceCpParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceCpParameter.m; sourceTree = "<group>"; };
-		AA4D035C20DA39CD003352A5 /* XhanceBaseParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceBaseParameter.h; sourceTree = "<group>"; };
-		AA4D035F20DA39CD003352A5 /* XhanceIAPSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceIAPSend.m; sourceTree = "<group>"; };
-		AA4D036020DA39CD003352A5 /* XhanceIAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceIAPManager.h; sourceTree = "<group>"; };
-		AA4D036120DA39CD003352A5 /* XhanceIAPSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceIAPSend.h; sourceTree = "<group>"; };
-		AA4D036220DA39CD003352A5 /* XhanceIAPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceIAPManager.m; sourceTree = "<group>"; };
-		AA4D036420DA39CD003352A5 /* XhanceTrackingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceTrackingManager.m; sourceTree = "<group>"; };
-		AA4D036520DA39CD003352A5 /* XhanceTrackingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceTrackingManager.h; sourceTree = "<group>"; };
-		AA4D036720DA39CD003352A5 /* XhanceSessionFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSessionFileCache.m; sourceTree = "<group>"; };
-		AA4D036820DA39CD003352A5 /* XhanceSessionSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSessionSend.h; sourceTree = "<group>"; };
-		AA4D036920DA39CD003352A5 /* XhanceSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSessionManager.h; sourceTree = "<group>"; };
-		AA4D036A20DA39CD003352A5 /* XhanceSessionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSessionModel.h; sourceTree = "<group>"; };
-		AA4D036B20DA39CD003352A5 /* XhanceSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSessionManager.m; sourceTree = "<group>"; };
-		AA4D036C20DA39CD003352A5 /* XhanceSessionSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSessionSend.m; sourceTree = "<group>"; };
-		AA4D036D20DA39CD003352A5 /* XhanceSessionFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSessionFileCache.h; sourceTree = "<group>"; };
-		AA4D036E20DA39CD003352A5 /* XhanceSessionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSessionModel.m; sourceTree = "<group>"; };
-		AA4D037020DA39CD003352A5 /* XhanceDeeplinkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceDeeplinkModel.m; sourceTree = "<group>"; };
-		AA4D037120DA39CD003352A5 /* XhanceDeeplinkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceDeeplinkManager.h; sourceTree = "<group>"; };
-		AA4D037220DA39CD003352A5 /* XhanceDeeplinkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceDeeplinkModel.h; sourceTree = "<group>"; };
-		AA4D037320DA39CD003352A5 /* XhanceDeeplinkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceDeeplinkManager.m; sourceTree = "<group>"; };
-		AA6DFE5720E6185E00A7F0C4 /* XhanceBase64Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XhanceBase64Utils.h; sourceTree = "<group>"; };
-		AA6DFE5820E6185E00A7F0C4 /* XhanceBase64Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XhanceBase64Utils.m; sourceTree = "<group>"; };
-		AA99555020DA4A9500F762D2 /* NSMutableDictionary+XhanceCheckNullValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+XhanceCheckNullValue.m"; sourceTree = "<group>"; };
-		AA99555120DA4A9500F762D2 /* NSMutableString+XhanceCheckNullValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+XhanceCheckNullValue.h"; sourceTree = "<group>"; };
-		AA99555220DA4A9500F762D2 /* NSMutableDictionary+XhanceCheckNullValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+XhanceCheckNullValue.h"; sourceTree = "<group>"; };
-		AA99555320DA4A9500F762D2 /* NSMutableString+XhanceCheckNullValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+XhanceCheckNullValue.m"; sourceTree = "<group>"; };
+		AA73875021475C81006F5F86 /* XhanceNetReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceNetReachability.m; sourceTree = "<group>"; };
+		AA73875121475C81006F5F86 /* XhanceNetConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceNetConnectionManager.h; sourceTree = "<group>"; };
+		AA73875221475C81006F5F86 /* XhanceNetConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceNetConnectionManager.m; sourceTree = "<group>"; };
+		AA73875321475C81006F5F86 /* XhanceNetReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceNetReachability.h; sourceTree = "<group>"; };
+		AA73875521475C81006F5F86 /* XhanceHttpSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceHttpSession.m; sourceTree = "<group>"; };
+		AA73875621475C81006F5F86 /* XhanceHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceHttpManager.h; sourceTree = "<group>"; };
+		AA73875721475C81006F5F86 /* XhanceHttpUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceHttpUrl.m; sourceTree = "<group>"; };
+		AA73875821475C81006F5F86 /* XhanceHttpSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceHttpSession.h; sourceTree = "<group>"; };
+		AA73875921475C81006F5F86 /* XhanceHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceHttpManager.m; sourceTree = "<group>"; };
+		AA73875A21475C81006F5F86 /* XhanceHttpUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceHttpUrl.h; sourceTree = "<group>"; };
+		AA73875C21475C81006F5F86 /* XhanceBase64Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceBase64Utils.m; sourceTree = "<group>"; };
+		AA73875D21475C81006F5F86 /* XhanceMd5Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceMd5Utils.h; sourceTree = "<group>"; };
+		AA73875E21475C81006F5F86 /* XhanceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceUtil.h; sourceTree = "<group>"; };
+		AA73875F21475C81006F5F86 /* XhanceBase64Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceBase64Utils.h; sourceTree = "<group>"; };
+		AA73876021475C81006F5F86 /* XhanceMd5Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceMd5Utils.m; sourceTree = "<group>"; };
+		AA73876121475C81006F5F86 /* XhanceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceUtil.m; sourceTree = "<group>"; };
+		AA73876321475C81006F5F86 /* XhanceSessionFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSessionFileCache.h; sourceTree = "<group>"; };
+		AA73876421475C81006F5F86 /* XhanceFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceFileCache.m; sourceTree = "<group>"; };
+		AA73876521475C81006F5F86 /* XhanceSessionFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSessionFileCache.m; sourceTree = "<group>"; };
+		AA73876621475C81006F5F86 /* XhanceFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceFileCache.h; sourceTree = "<group>"; };
+		AA73876821475C81006F5F86 /* XhanceBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceBaseModel.h; sourceTree = "<group>"; };
+		AA73876A21475C81006F5F86 /* XhanceIAPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceIAPModel.h; sourceTree = "<group>"; };
+		AA73876B21475C81006F5F86 /* XhanceIAPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceIAPModel.m; sourceTree = "<group>"; };
+		AA73876D21475C81006F5F86 /* XhanceCustomEventModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceCustomEventModel.h; sourceTree = "<group>"; };
+		AA73876E21475C81006F5F86 /* XhanceCustomEventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceCustomEventModel.m; sourceTree = "<group>"; };
+		AA73877021475C81006F5F86 /* XhanceBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceBaseModel.m; sourceTree = "<group>"; };
+		AA73877221475C81006F5F86 /* XhanceSessionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSessionModel.h; sourceTree = "<group>"; };
+		AA73877321475C81006F5F86 /* XhanceSessionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSessionModel.m; sourceTree = "<group>"; };
+		AA73877721475C81006F5F86 /* XhanceStatisticalKeychainHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceStatisticalKeychainHelper.h; sourceTree = "<group>"; };
+		AA73877821475C81006F5F86 /* XhanceStatisticalKeychainDeviceID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceStatisticalKeychainDeviceID.h; sourceTree = "<group>"; };
+		AA73877921475C81006F5F86 /* XhanceStatisticalKeychainHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceStatisticalKeychainHelper.m; sourceTree = "<group>"; };
+		AA73877A21475C81006F5F86 /* XhanceStatisticalKeychainDeviceID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceStatisticalKeychainDeviceID.m; sourceTree = "<group>"; };
+		AA73877C21475C81006F5F86 /* XhanceStatisticalSimulateIDFA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceStatisticalSimulateIDFA.h; sourceTree = "<group>"; };
+		AA73877D21475C81006F5F86 /* XhanceStatisticalSimulateIDFA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceStatisticalSimulateIDFA.m; sourceTree = "<group>"; };
+		AA73877F21475C81006F5F86 /* NSMutableDictionary+XhanceCheckNullValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+XhanceCheckNullValue.m"; sourceTree = "<group>"; };
+		AA73878021475C81006F5F86 /* NSMutableString+XhanceCheckNullValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+XhanceCheckNullValue.h"; sourceTree = "<group>"; };
+		AA73878121475C81006F5F86 /* NSMutableDictionary+XhanceCheckNullValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+XhanceCheckNullValue.h"; sourceTree = "<group>"; };
+		AA73878221475C81006F5F86 /* NSMutableString+XhanceCheckNullValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+XhanceCheckNullValue.m"; sourceTree = "<group>"; };
+		AA73878421475C81006F5F86 /* XhanceRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceRSA.h; sourceTree = "<group>"; };
+		AA73878521475C81006F5F86 /* XhanceRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceRSA.m; sourceTree = "<group>"; };
+		AA73878721475C81006F5F86 /* XhanceFBEncryptorAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceFBEncryptorAES.m; sourceTree = "<group>"; };
+		AA73878821475C81006F5F86 /* XhanceAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceAES.h; sourceTree = "<group>"; };
+		AA73878921475C81006F5F86 /* XhanceFBEncryptorAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceFBEncryptorAES.h; sourceTree = "<group>"; };
+		AA73878A21475C81006F5F86 /* XhanceAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceAES.m; sourceTree = "<group>"; };
+		AA73878C21475C81006F5F86 /* XhanceSDKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSDKVersion.h; sourceTree = "<group>"; };
+		AA73878D21475C81006F5F86 /* XhanceSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSDK.h; sourceTree = "<group>"; };
+		AA73878E21475C81006F5F86 /* XhanceSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSDK.m; sourceTree = "<group>"; };
+		AA73879021475C81006F5F86 /* XhanceBaseParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceBaseParameter.h; sourceTree = "<group>"; };
+		AA73879121475C81006F5F86 /* XhanceCpParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceCpParameter.m; sourceTree = "<group>"; };
+		AA73879321475C81006F5F86 /* XhanceIAPParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceIAPParameter.m; sourceTree = "<group>"; };
+		AA73879421475C81006F5F86 /* XhanceIAPParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceIAPParameter.h; sourceTree = "<group>"; };
+		AA73879621475C81006F5F86 /* XhanceCustomEventParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceCustomEventParameter.h; sourceTree = "<group>"; };
+		AA73879721475C81006F5F86 /* XhanceCustomEventParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceCustomEventParameter.m; sourceTree = "<group>"; };
+		AA73879921475C81006F5F86 /* XhanceTrackingParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceTrackingParameter.m; sourceTree = "<group>"; };
+		AA73879A21475C81006F5F86 /* XhanceTrackingParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceTrackingParameter.h; sourceTree = "<group>"; };
+		AA73879B21475C81006F5F86 /* XhanceBaseParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceBaseParameter.m; sourceTree = "<group>"; };
+		AA73879C21475C81006F5F86 /* XhanceCpParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceCpParameter.h; sourceTree = "<group>"; };
+		AA73879E21475C81006F5F86 /* XhanceSessionParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSessionParameter.h; sourceTree = "<group>"; };
+		AA73879F21475C81006F5F86 /* XhanceSessionParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSessionParameter.m; sourceTree = "<group>"; };
+		AA7387A221475C81006F5F86 /* XhanceIAPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceIAPManager.m; sourceTree = "<group>"; };
+		AA7387A321475C81006F5F86 /* XhanceIAPSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceIAPSend.h; sourceTree = "<group>"; };
+		AA7387A421475C81006F5F86 /* XhanceIAPSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceIAPSend.m; sourceTree = "<group>"; };
+		AA7387A521475C81006F5F86 /* XhanceIAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceIAPManager.h; sourceTree = "<group>"; };
+		AA7387A721475C81006F5F86 /* XhanceCustomEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceCustomEventManager.h; sourceTree = "<group>"; };
+		AA7387A821475C81006F5F86 /* XhanceCustomEventSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceCustomEventSend.h; sourceTree = "<group>"; };
+		AA7387A921475C81006F5F86 /* XhanceCustomEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceCustomEventManager.m; sourceTree = "<group>"; };
+		AA7387AA21475C81006F5F86 /* XhanceCustomEventSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceCustomEventSend.m; sourceTree = "<group>"; };
+		AA7387AC21475C81006F5F86 /* XhanceTrackingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceTrackingManager.h; sourceTree = "<group>"; };
+		AA7387AD21475C81006F5F86 /* XhanceTrackingSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceTrackingSend.h; sourceTree = "<group>"; };
+		AA7387AE21475C81006F5F86 /* XhanceTrackingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceTrackingManager.m; sourceTree = "<group>"; };
+		AA7387AF21475C81006F5F86 /* XhanceTrackingSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceTrackingSend.m; sourceTree = "<group>"; };
+		AA7387B121475C81006F5F86 /* XhanceDeeplinkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceDeeplinkModel.h; sourceTree = "<group>"; };
+		AA7387B221475C81006F5F86 /* XhanceDeeplinkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceDeeplinkManager.m; sourceTree = "<group>"; };
+		AA7387B321475C81006F5F86 /* XhanceDeeplinkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceDeeplinkModel.m; sourceTree = "<group>"; };
+		AA7387B421475C81006F5F86 /* XhanceDeeplinkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceDeeplinkManager.h; sourceTree = "<group>"; };
+		AA7387B621475C81006F5F86 /* XhanceSessionSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSessionSend.m; sourceTree = "<group>"; };
+		AA7387B721475C81006F5F86 /* XhanceSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSessionManager.h; sourceTree = "<group>"; };
+		AA7387B821475C81006F5F86 /* XhanceSessionSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XhanceSessionSend.h; sourceTree = "<group>"; };
+		AA7387B921475C81006F5F86 /* XhanceSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XhanceSessionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +158,7 @@
 		AA05D3B2207F0D0700D15153 = {
 			isa = PBXGroup;
 			children = (
-				AA4D032620DA39CD003352A5 /* code */,
+				AA73874D21475C81006F5F86 /* code */,
 				AA05D3BD207F0D0700D15153 /* XhanceSDK */,
 				AA05D3BC207F0D0700D15153 /* Products */,
 			);
@@ -166,220 +187,322 @@
 			path = XhanceSDK;
 			sourceTree = "<group>";
 		};
-		AA4D032620DA39CD003352A5 /* code */ = {
+		AA73874D21475C81006F5F86 /* code */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D033920DA39CD003352A5 /* Lib */,
-				AA4D033420DA39CD003352A5 /* Utils */,
-				AA4D032720DA39CD003352A5 /* Network */,
-				AA4D034E20DA39CD003352A5 /* API */,
-				AA4D035220DA39CD003352A5 /* Parameter */,
-				AA4D035D20DA39CD003352A5 /* Event */,
-				AA4D036F20DA39CD003352A5 /* Deeplink */,
+				AA73874E21475C81006F5F86 /* Network */,
+				AA73875B21475C81006F5F86 /* Utils */,
+				AA73876221475C81006F5F86 /* FileCache */,
+				AA73876721475C81006F5F86 /* Model */,
+				AA73877421475C81006F5F86 /* Lib */,
+				AA73878B21475C81006F5F86 /* API */,
+				AA73878F21475C81006F5F86 /* Parameter */,
+				AA7387A021475C81006F5F86 /* Event */,
 			);
 			path = code;
 			sourceTree = "<group>";
 		};
-		AA4D032720DA39CD003352A5 /* Network */ = {
+		AA73874E21475C81006F5F86 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D032820DA39CD003352A5 /* NetMonitor */,
-				AA4D032D20DA39CD003352A5 /* HTTP */,
+				AA73874F21475C81006F5F86 /* NetMonitor */,
+				AA73875421475C81006F5F86 /* HTTP */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		AA4D032820DA39CD003352A5 /* NetMonitor */ = {
+		AA73874F21475C81006F5F86 /* NetMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D032920DA39CD003352A5 /* XhanceNetConnectionManager.h */,
-				AA4D032B20DA39CD003352A5 /* XhanceNetConnectionManager.m */,
-				AA4D032A20DA39CD003352A5 /* XhanceNetReachability.h */,
-				AA4D032C20DA39CD003352A5 /* XhanceNetReachability.m */,
+				AA73875021475C81006F5F86 /* XhanceNetReachability.m */,
+				AA73875121475C81006F5F86 /* XhanceNetConnectionManager.h */,
+				AA73875221475C81006F5F86 /* XhanceNetConnectionManager.m */,
+				AA73875321475C81006F5F86 /* XhanceNetReachability.h */,
 			);
 			path = NetMonitor;
 			sourceTree = "<group>";
 		};
-		AA4D032D20DA39CD003352A5 /* HTTP */ = {
+		AA73875421475C81006F5F86 /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D033220DA39CD003352A5 /* XhanceHttpManager.h */,
-				AA4D033020DA39CD003352A5 /* XhanceHttpManager.m */,
-				AA4D032E20DA39CD003352A5 /* XhanceHttpSession.h */,
-				AA4D033120DA39CD003352A5 /* XhanceHttpSession.m */,
-				AA4D032F20DA39CD003352A5 /* XhanceHttpUrl.h */,
-				AA4D033320DA39CD003352A5 /* XhanceHttpUrl.m */,
+				AA73875521475C81006F5F86 /* XhanceHttpSession.m */,
+				AA73875621475C81006F5F86 /* XhanceHttpManager.h */,
+				AA73875721475C81006F5F86 /* XhanceHttpUrl.m */,
+				AA73875821475C81006F5F86 /* XhanceHttpSession.h */,
+				AA73875921475C81006F5F86 /* XhanceHttpManager.m */,
+				AA73875A21475C81006F5F86 /* XhanceHttpUrl.h */,
 			);
 			path = HTTP;
 			sourceTree = "<group>";
 		};
-		AA4D033420DA39CD003352A5 /* Utils */ = {
+		AA73875B21475C81006F5F86 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				AA6DFE5720E6185E00A7F0C4 /* XhanceBase64Utils.h */,
-				AA6DFE5820E6185E00A7F0C4 /* XhanceBase64Utils.m */,
-				AA4D033520DA39CD003352A5 /* XhanceMd5Utils.h */,
-				AA4D033720DA39CD003352A5 /* XhanceMd5Utils.m */,
-				AA4D033820DA39CD003352A5 /* XhanceUtil.h */,
-				AA4D033620DA39CD003352A5 /* XhanceUtil.m */,
+				AA73875C21475C81006F5F86 /* XhanceBase64Utils.m */,
+				AA73875D21475C81006F5F86 /* XhanceMd5Utils.h */,
+				AA73875E21475C81006F5F86 /* XhanceUtil.h */,
+				AA73875F21475C81006F5F86 /* XhanceBase64Utils.h */,
+				AA73876021475C81006F5F86 /* XhanceMd5Utils.m */,
+				AA73876121475C81006F5F86 /* XhanceUtil.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		AA4D033920DA39CD003352A5 /* Lib */ = {
+		AA73876221475C81006F5F86 /* FileCache */ = {
 			isa = PBXGroup;
 			children = (
-				AA99554F20DA4A9500F762D2 /* Category */,
-				AA4D033A20DA39CD003352A5 /* AnalysisDeviceID */,
-				AA4D034620DA39CD003352A5 /* RSA */,
-				AA4D034920DA39CD003352A5 /* AES128ECB */,
+				AA73876321475C81006F5F86 /* XhanceSessionFileCache.h */,
+				AA73876421475C81006F5F86 /* XhanceFileCache.m */,
+				AA73876521475C81006F5F86 /* XhanceSessionFileCache.m */,
+				AA73876621475C81006F5F86 /* XhanceFileCache.h */,
 			);
-			path = Lib;
+			path = FileCache;
 			sourceTree = "<group>";
 		};
-		AA4D033A20DA39CD003352A5 /* AnalysisDeviceID */ = {
+		AA73876721475C81006F5F86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D033B20DA39CD003352A5 /* KeychainDeviceID */,
-				AA4D034020DA39CD003352A5 /* SimulateIDFA */,
+				AA73876821475C81006F5F86 /* XhanceBaseModel.h */,
+				AA73876921475C81006F5F86 /* IAP */,
+				AA73876C21475C81006F5F86 /* CustomEvent */,
+				AA73876F21475C81006F5F86 /* Tracking */,
+				AA73877021475C81006F5F86 /* XhanceBaseModel.m */,
+				AA73877121475C81006F5F86 /* Session */,
 			);
-			path = AnalysisDeviceID;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		AA4D033B20DA39CD003352A5 /* KeychainDeviceID */ = {
+		AA73876921475C81006F5F86 /* IAP */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D033C20DA39CD003352A5 /* XhanceStatisticalKeychainDeviceID.h */,
-				AA4D033F20DA39CD003352A5 /* XhanceStatisticalKeychainDeviceID.m */,
-				AA4D033E20DA39CD003352A5 /* XhanceStatisticalKeychainHelper.h */,
-				AA4D033D20DA39CD003352A5 /* XhanceStatisticalKeychainHelper.m */,
-			);
-			path = KeychainDeviceID;
-			sourceTree = "<group>";
-		};
-		AA4D034020DA39CD003352A5 /* SimulateIDFA */ = {
-			isa = PBXGroup;
-			children = (
-				AA4D034220DA39CD003352A5 /* XhanceStatisticalSimulateIDFA.h */,
-				AA4D034120DA39CD003352A5 /* XhanceStatisticalSimulateIDFA.m */,
-			);
-			path = SimulateIDFA;
-			sourceTree = "<group>";
-		};
-		AA4D034620DA39CD003352A5 /* RSA */ = {
-			isa = PBXGroup;
-			children = (
-				AA4D034820DA39CD003352A5 /* XhanceRSA.h */,
-				AA4D034720DA39CD003352A5 /* XhanceRSA.m */,
-			);
-			path = RSA;
-			sourceTree = "<group>";
-		};
-		AA4D034920DA39CD003352A5 /* AES128ECB */ = {
-			isa = PBXGroup;
-			children = (
-				AA4D034C20DA39CD003352A5 /* XhanceAES.h */,
-				AA4D034A20DA39CD003352A5 /* XhanceAES.m */,
-				AA4D034D20DA39CD003352A5 /* XhanceFBEncryptorAES.h */,
-				AA4D034B20DA39CD003352A5 /* XhanceFBEncryptorAES.m */,
-			);
-			path = AES128ECB;
-			sourceTree = "<group>";
-		};
-		AA4D034E20DA39CD003352A5 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				AA4D035120DA39CD003352A5 /* XhanceSDK.h */,
-				AA4D034F20DA39CD003352A5 /* XhanceSDK.m */,
-				AA4D035020DA39CD003352A5 /* XhanceSDKVersion.h */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		AA4D035220DA39CD003352A5 /* Parameter */ = {
-			isa = PBXGroup;
-			children = (
-				AA4D035C20DA39CD003352A5 /* XhanceBaseParameter.h */,
-				AA4D035620DA39CD003352A5 /* XhanceBaseParameter.m */,
-				AA4D035720DA39CD003352A5 /* XhanceCpParameter.h */,
-				AA4D035B20DA39CD003352A5 /* XhanceCpParameter.m */,
-				AA4D035820DA39CD003352A5 /* XhanceIAPParameter.h */,
-				AA4D035320DA39CD003352A5 /* XhanceIAPParameter.m */,
-				AA4D035A20DA39CD003352A5 /* XhanceSessionParameter.h */,
-				AA4D035520DA39CD003352A5 /* XhanceSessionParameter.m */,
-				AA4D035920DA39CD003352A5 /* XhanceTrackingParameter.h */,
-				AA4D035420DA39CD003352A5 /* XhanceTrackingParameter.m */,
-			);
-			path = Parameter;
-			sourceTree = "<group>";
-		};
-		AA4D035D20DA39CD003352A5 /* Event */ = {
-			isa = PBXGroup;
-			children = (
-				AA4D035E20DA39CD003352A5 /* IAP */,
-				AA4D036320DA39CD003352A5 /* TrackIng */,
-				AA4D036620DA39CD003352A5 /* Session */,
-			);
-			path = Event;
-			sourceTree = "<group>";
-		};
-		AA4D035E20DA39CD003352A5 /* IAP */ = {
-			isa = PBXGroup;
-			children = (
-				AA4D036020DA39CD003352A5 /* XhanceIAPManager.h */,
-				AA4D036220DA39CD003352A5 /* XhanceIAPManager.m */,
-				AA4D036120DA39CD003352A5 /* XhanceIAPSend.h */,
-				AA4D035F20DA39CD003352A5 /* XhanceIAPSend.m */,
+				AA73876A21475C81006F5F86 /* XhanceIAPModel.h */,
+				AA73876B21475C81006F5F86 /* XhanceIAPModel.m */,
 			);
 			path = IAP;
 			sourceTree = "<group>";
 		};
-		AA4D036320DA39CD003352A5 /* TrackIng */ = {
+		AA73876C21475C81006F5F86 /* CustomEvent */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D036520DA39CD003352A5 /* XhanceTrackingManager.h */,
-				AA4D036420DA39CD003352A5 /* XhanceTrackingManager.m */,
-				AA48DCA2211012DF00621BA4 /* XhanceTrackingSend.h */,
-				AA48DCA3211012DF00621BA4 /* XhanceTrackingSend.m */,
+				AA73876D21475C81006F5F86 /* XhanceCustomEventModel.h */,
+				AA73876E21475C81006F5F86 /* XhanceCustomEventModel.m */,
 			);
-			path = TrackIng;
+			path = CustomEvent;
 			sourceTree = "<group>";
 		};
-		AA4D036620DA39CD003352A5 /* Session */ = {
+		AA73876F21475C81006F5F86 /* Tracking */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D036D20DA39CD003352A5 /* XhanceSessionFileCache.h */,
-				AA4D036720DA39CD003352A5 /* XhanceSessionFileCache.m */,
-				AA4D036920DA39CD003352A5 /* XhanceSessionManager.h */,
-				AA4D036B20DA39CD003352A5 /* XhanceSessionManager.m */,
-				AA4D036A20DA39CD003352A5 /* XhanceSessionModel.h */,
-				AA4D036E20DA39CD003352A5 /* XhanceSessionModel.m */,
-				AA4D036820DA39CD003352A5 /* XhanceSessionSend.h */,
-				AA4D036C20DA39CD003352A5 /* XhanceSessionSend.m */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		AA73877121475C81006F5F86 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				AA73877221475C81006F5F86 /* XhanceSessionModel.h */,
+				AA73877321475C81006F5F86 /* XhanceSessionModel.m */,
 			);
 			path = Session;
 			sourceTree = "<group>";
 		};
-		AA4D036F20DA39CD003352A5 /* Deeplink */ = {
+		AA73877421475C81006F5F86 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				AA4D037120DA39CD003352A5 /* XhanceDeeplinkManager.h */,
-				AA4D037320DA39CD003352A5 /* XhanceDeeplinkManager.m */,
-				AA4D037220DA39CD003352A5 /* XhanceDeeplinkModel.h */,
-				AA4D037020DA39CD003352A5 /* XhanceDeeplinkModel.m */,
+				AA73877521475C81006F5F86 /* AnalysisDeviceID */,
+				AA73877E21475C81006F5F86 /* Category */,
+				AA73878321475C81006F5F86 /* RSA */,
+				AA73878621475C81006F5F86 /* AES128ECB */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		AA73877521475C81006F5F86 /* AnalysisDeviceID */ = {
+			isa = PBXGroup;
+			children = (
+				AA73877621475C81006F5F86 /* KeychainDeviceID */,
+				AA73877B21475C81006F5F86 /* SimulateIDFA */,
+			);
+			path = AnalysisDeviceID;
+			sourceTree = "<group>";
+		};
+		AA73877621475C81006F5F86 /* KeychainDeviceID */ = {
+			isa = PBXGroup;
+			children = (
+				AA73877721475C81006F5F86 /* XhanceStatisticalKeychainHelper.h */,
+				AA73877821475C81006F5F86 /* XhanceStatisticalKeychainDeviceID.h */,
+				AA73877921475C81006F5F86 /* XhanceStatisticalKeychainHelper.m */,
+				AA73877A21475C81006F5F86 /* XhanceStatisticalKeychainDeviceID.m */,
+			);
+			path = KeychainDeviceID;
+			sourceTree = "<group>";
+		};
+		AA73877B21475C81006F5F86 /* SimulateIDFA */ = {
+			isa = PBXGroup;
+			children = (
+				AA73877C21475C81006F5F86 /* XhanceStatisticalSimulateIDFA.h */,
+				AA73877D21475C81006F5F86 /* XhanceStatisticalSimulateIDFA.m */,
+			);
+			path = SimulateIDFA;
+			sourceTree = "<group>";
+		};
+		AA73877E21475C81006F5F86 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				AA73877F21475C81006F5F86 /* NSMutableDictionary+XhanceCheckNullValue.m */,
+				AA73878021475C81006F5F86 /* NSMutableString+XhanceCheckNullValue.h */,
+				AA73878121475C81006F5F86 /* NSMutableDictionary+XhanceCheckNullValue.h */,
+				AA73878221475C81006F5F86 /* NSMutableString+XhanceCheckNullValue.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		AA73878321475C81006F5F86 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				AA73878421475C81006F5F86 /* XhanceRSA.h */,
+				AA73878521475C81006F5F86 /* XhanceRSA.m */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
+		AA73878621475C81006F5F86 /* AES128ECB */ = {
+			isa = PBXGroup;
+			children = (
+				AA73878721475C81006F5F86 /* XhanceFBEncryptorAES.m */,
+				AA73878821475C81006F5F86 /* XhanceAES.h */,
+				AA73878921475C81006F5F86 /* XhanceFBEncryptorAES.h */,
+				AA73878A21475C81006F5F86 /* XhanceAES.m */,
+			);
+			path = AES128ECB;
+			sourceTree = "<group>";
+		};
+		AA73878B21475C81006F5F86 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AA73878C21475C81006F5F86 /* XhanceSDKVersion.h */,
+				AA73878D21475C81006F5F86 /* XhanceSDK.h */,
+				AA73878E21475C81006F5F86 /* XhanceSDK.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AA73878F21475C81006F5F86 /* Parameter */ = {
+			isa = PBXGroup;
+			children = (
+				AA73879021475C81006F5F86 /* XhanceBaseParameter.h */,
+				AA73879121475C81006F5F86 /* XhanceCpParameter.m */,
+				AA73879221475C81006F5F86 /* IAP */,
+				AA73879521475C81006F5F86 /* CustomEvent */,
+				AA73879821475C81006F5F86 /* Tracking */,
+				AA73879B21475C81006F5F86 /* XhanceBaseParameter.m */,
+				AA73879C21475C81006F5F86 /* XhanceCpParameter.h */,
+				AA73879D21475C81006F5F86 /* Session */,
+			);
+			path = Parameter;
+			sourceTree = "<group>";
+		};
+		AA73879221475C81006F5F86 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				AA73879321475C81006F5F86 /* XhanceIAPParameter.m */,
+				AA73879421475C81006F5F86 /* XhanceIAPParameter.h */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
+		AA73879521475C81006F5F86 /* CustomEvent */ = {
+			isa = PBXGroup;
+			children = (
+				AA73879621475C81006F5F86 /* XhanceCustomEventParameter.h */,
+				AA73879721475C81006F5F86 /* XhanceCustomEventParameter.m */,
+			);
+			path = CustomEvent;
+			sourceTree = "<group>";
+		};
+		AA73879821475C81006F5F86 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				AA73879921475C81006F5F86 /* XhanceTrackingParameter.m */,
+				AA73879A21475C81006F5F86 /* XhanceTrackingParameter.h */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		AA73879D21475C81006F5F86 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				AA73879E21475C81006F5F86 /* XhanceSessionParameter.h */,
+				AA73879F21475C81006F5F86 /* XhanceSessionParameter.m */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		AA7387A021475C81006F5F86 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				AA7387A121475C81006F5F86 /* IAP */,
+				AA7387A621475C81006F5F86 /* CustomEvent */,
+				AA7387AB21475C81006F5F86 /* Tracking */,
+				AA7387B021475C81006F5F86 /* Deeplink */,
+				AA7387B521475C81006F5F86 /* Session */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		AA7387A121475C81006F5F86 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				AA7387A221475C81006F5F86 /* XhanceIAPManager.m */,
+				AA7387A321475C81006F5F86 /* XhanceIAPSend.h */,
+				AA7387A421475C81006F5F86 /* XhanceIAPSend.m */,
+				AA7387A521475C81006F5F86 /* XhanceIAPManager.h */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
+		AA7387A621475C81006F5F86 /* CustomEvent */ = {
+			isa = PBXGroup;
+			children = (
+				AA7387A721475C81006F5F86 /* XhanceCustomEventManager.h */,
+				AA7387A821475C81006F5F86 /* XhanceCustomEventSend.h */,
+				AA7387A921475C81006F5F86 /* XhanceCustomEventManager.m */,
+				AA7387AA21475C81006F5F86 /* XhanceCustomEventSend.m */,
+			);
+			path = CustomEvent;
+			sourceTree = "<group>";
+		};
+		AA7387AB21475C81006F5F86 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				AA7387AC21475C81006F5F86 /* XhanceTrackingManager.h */,
+				AA7387AD21475C81006F5F86 /* XhanceTrackingSend.h */,
+				AA7387AE21475C81006F5F86 /* XhanceTrackingManager.m */,
+				AA7387AF21475C81006F5F86 /* XhanceTrackingSend.m */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		AA7387B021475C81006F5F86 /* Deeplink */ = {
+			isa = PBXGroup;
+			children = (
+				AA7387B121475C81006F5F86 /* XhanceDeeplinkModel.h */,
+				AA7387B221475C81006F5F86 /* XhanceDeeplinkManager.m */,
+				AA7387B321475C81006F5F86 /* XhanceDeeplinkModel.m */,
+				AA7387B421475C81006F5F86 /* XhanceDeeplinkManager.h */,
 			);
 			path = Deeplink;
 			sourceTree = "<group>";
 		};
-		AA99554F20DA4A9500F762D2 /* Category */ = {
+		AA7387B521475C81006F5F86 /* Session */ = {
 			isa = PBXGroup;
 			children = (
-				AA99555220DA4A9500F762D2 /* NSMutableDictionary+XhanceCheckNullValue.h */,
-				AA99555020DA4A9500F762D2 /* NSMutableDictionary+XhanceCheckNullValue.m */,
-				AA99555120DA4A9500F762D2 /* NSMutableString+XhanceCheckNullValue.h */,
-				AA99555320DA4A9500F762D2 /* NSMutableString+XhanceCheckNullValue.m */,
+				AA7387B621475C81006F5F86 /* XhanceSessionSend.m */,
+				AA7387B721475C81006F5F86 /* XhanceSessionManager.h */,
+				AA7387B821475C81006F5F86 /* XhanceSessionSend.h */,
+				AA7387B921475C81006F5F86 /* XhanceSessionManager.m */,
 			);
-			path = Category;
+			path = Session;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,41 +576,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA4D037B20DA39CD003352A5 /* XhanceStatisticalKeychainHelper.m in Sources */,
-				AA4D038B20DA39CD003352A5 /* XhanceSessionFileCache.m in Sources */,
+				AA7387BE21475C81006F5F86 /* XhanceHttpManager.m in Sources */,
 				AA05D3C3207F0D0800D15153 /* ViewController.m in Sources */,
-				AA4D038720DA39CD003352A5 /* XhanceCpParameter.m in Sources */,
-				AA4D038820DA39CD003352A5 /* XhanceIAPSend.m in Sources */,
-				AA4D037C20DA39CD003352A5 /* XhanceStatisticalKeychainDeviceID.m in Sources */,
+				AA7387BA21475C81006F5F86 /* XhanceNetReachability.m in Sources */,
+				AA7387C921475C81006F5F86 /* XhanceStatisticalKeychainDeviceID.m in Sources */,
+				AA7387D921475C81006F5F86 /* XhanceCustomEventManager.m in Sources */,
+				AA7387D121475C81006F5F86 /* XhanceCpParameter.m in Sources */,
 				AA05D3CE207F0D0800D15153 /* main.m in Sources */,
-				AA4D038020DA39CD003352A5 /* XhanceAES.m in Sources */,
-				AA99555420DA4A9500F762D2 /* NSMutableDictionary+XhanceCheckNullValue.m in Sources */,
-				AA4D038320DA39CD003352A5 /* XhanceIAPParameter.m in Sources */,
-				AA4D037D20DA39CD003352A5 /* XhanceStatisticalSimulateIDFA.m in Sources */,
-				AA4D038920DA39CD003352A5 /* XhanceIAPManager.m in Sources */,
-				AA48DCA4211012E000621BA4 /* XhanceTrackingSend.m in Sources */,
-				AA4D038F20DA39CD003352A5 /* XhanceDeeplinkModel.m in Sources */,
-				AA4D038E20DA39CD003352A5 /* XhanceSessionModel.m in Sources */,
-				AA4D037820DA39CD003352A5 /* XhanceHttpUrl.m in Sources */,
-				AA4D037A20DA39CD003352A5 /* XhanceMd5Utils.m in Sources */,
-				AA4D037720DA39CD003352A5 /* XhanceHttpSession.m in Sources */,
-				AA4D037520DA39CD003352A5 /* XhanceNetReachability.m in Sources */,
-				AA4D038620DA39CD003352A5 /* XhanceBaseParameter.m in Sources */,
-				AA99555520DA4A9500F762D2 /* NSMutableString+XhanceCheckNullValue.m in Sources */,
-				AA4D037420DA39CD003352A5 /* XhanceNetConnectionManager.m in Sources */,
-				AA4D037620DA39CD003352A5 /* XhanceHttpManager.m in Sources */,
-				AA6DFE5920E6185E00A7F0C4 /* XhanceBase64Utils.m in Sources */,
-				AA4D037920DA39CD003352A5 /* XhanceUtil.m in Sources */,
-				AA4D038220DA39CD003352A5 /* XhanceSDK.m in Sources */,
-				AA4D038C20DA39CD003352A5 /* XhanceSessionManager.m in Sources */,
-				AA4D038120DA39CD003352A5 /* XhanceFBEncryptorAES.m in Sources */,
-				AA4D038420DA39CD003352A5 /* XhanceTrackingParameter.m in Sources */,
+				AA7387BD21475C81006F5F86 /* XhanceHttpUrl.m in Sources */,
 				AA05D3C0207F0D0800D15153 /* AppDelegate.m in Sources */,
-				AA4D038A20DA39CD003352A5 /* XhanceTrackingManager.m in Sources */,
-				AA4D038D20DA39CD003352A5 /* XhanceSessionSend.m in Sources */,
-				AA4D037F20DA39CD003352A5 /* XhanceRSA.m in Sources */,
-				AA4D039020DA39CD003352A5 /* XhanceDeeplinkManager.m in Sources */,
-				AA4D038520DA39CD003352A5 /* XhanceSessionParameter.m in Sources */,
+				AA7387C321475C81006F5F86 /* XhanceSessionFileCache.m in Sources */,
+				AA7387BB21475C81006F5F86 /* XhanceNetConnectionManager.m in Sources */,
+				AA7387C821475C81006F5F86 /* XhanceStatisticalKeychainHelper.m in Sources */,
+				AA7387D821475C81006F5F86 /* XhanceIAPSend.m in Sources */,
+				AA7387DC21475C81006F5F86 /* XhanceTrackingSend.m in Sources */,
+				AA7387CA21475C81006F5F86 /* XhanceStatisticalSimulateIDFA.m in Sources */,
+				AA7387CD21475C81006F5F86 /* XhanceRSA.m in Sources */,
+				AA7387C221475C81006F5F86 /* XhanceFileCache.m in Sources */,
+				AA7387DB21475C81006F5F86 /* XhanceTrackingManager.m in Sources */,
+				AA7387DF21475C81006F5F86 /* XhanceSessionSend.m in Sources */,
+				AA7387CF21475C81006F5F86 /* XhanceAES.m in Sources */,
+				AA7387D621475C81006F5F86 /* XhanceSessionParameter.m in Sources */,
+				AA7387DE21475C81006F5F86 /* XhanceDeeplinkModel.m in Sources */,
+				AA7387C121475C81006F5F86 /* XhanceUtil.m in Sources */,
+				AA7387E021475C81006F5F86 /* XhanceSessionManager.m in Sources */,
+				AA7387DD21475C81006F5F86 /* XhanceDeeplinkManager.m in Sources */,
+				AA7387C721475C81006F5F86 /* XhanceSessionModel.m in Sources */,
+				AA7387DA21475C81006F5F86 /* XhanceCustomEventSend.m in Sources */,
+				AA7387CE21475C81006F5F86 /* XhanceFBEncryptorAES.m in Sources */,
+				AA7387D021475C81006F5F86 /* XhanceSDK.m in Sources */,
+				AA7387C021475C81006F5F86 /* XhanceMd5Utils.m in Sources */,
+				AA7387C521475C81006F5F86 /* XhanceCustomEventModel.m in Sources */,
+				AA7387D221475C81006F5F86 /* XhanceIAPParameter.m in Sources */,
+				AA7387D721475C81006F5F86 /* XhanceIAPManager.m in Sources */,
+				AA7387BC21475C81006F5F86 /* XhanceHttpSession.m in Sources */,
+				AA7387D521475C81006F5F86 /* XhanceBaseParameter.m in Sources */,
+				AA7387CB21475C81006F5F86 /* NSMutableDictionary+XhanceCheckNullValue.m in Sources */,
+				AA7387BF21475C81006F5F86 /* XhanceBase64Utils.m in Sources */,
+				AA7387D321475C81006F5F86 /* XhanceCustomEventParameter.m in Sources */,
+				AA7387CC21475C81006F5F86 /* NSMutableString+XhanceCheckNullValue.m in Sources */,
+				AA7387D421475C81006F5F86 /* XhanceTrackingParameter.m in Sources */,
+				AA7387C421475C81006F5F86 /* XhanceIAPModel.m in Sources */,
+				AA7387C621475C81006F5F86 /* XhanceBaseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

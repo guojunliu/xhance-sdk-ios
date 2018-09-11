@@ -2,7 +2,7 @@
 //  XhanceSessionManager.m
 //  XhanceSDK
 //
-//  Created by steve on 2018/5/14.
+//  Created by liuguojun on 2018/5/14.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "XhanceSessionModel.h"
 #import "XhanceMd5Utils.h"
-#import "XhanceSessionFileCache.h"
+#import "XhanceFileCache.h"
 #import "XhanceSessionSend.h"
 
 #define TIMER_SESSION_INTERVAL      (300)
@@ -183,15 +183,21 @@ static XhanceSessionManager *manager;
 #pragma mark - CacheSession
 
 - (void)cacheSession:(XhanceSessionModel *)sessionModel {
-    [[XhanceSessionFileCache shareInstance] writeAdvertiserSession:sessionModel];
-    [[XhanceSessionFileCache shareInstance] writeAdRealmSession:sessionModel];
+    // Write session model to file chache
+    NSDictionary *sessionDic = [XhanceSessionModel convertDicWithModel:sessionModel];
+    [[XhanceFileCache shareInstance] writeDic:sessionDic
+                                  channelType:XhanceFileCacheChannelTypeAdvertiser
+                                     pathType:XhanceFileCachePathTypeSession];
+    [[XhanceFileCache shareInstance] writeDic:sessionDic
+                                  channelType:XhanceFileCacheChannelTypeAdRealm
+                                     pathType:XhanceFileCachePathTypeSession];
 }
 
 #pragma mark - sendSession
 
 - (void)sendSession:(XhanceSessionModel *)sessionModel {
+    [self cacheSession:sessionModel];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        [self cacheSession:sessionModel];
         [self sendAdvertiserSession:sessionModel];
         [self sendAdRealmSession:sessionModel];
     });
@@ -213,15 +219,27 @@ static XhanceSessionManager *manager;
 #pragma mark - checkDefeatedSessionAndSend
 
 - (void)checkDefeatedSessionAndSend {
-    NSArray <XhanceSessionModel *> *defeatedAdvertiserSessions = [[XhanceSessionFileCache shareInstance] getAdvertiserSessions];
-    for (int i = 0; i < defeatedAdvertiserSessions.count; i++) {
-        XhanceSessionModel *sessionModel = [defeatedAdvertiserSessions objectAtIndex:i];
+    // Get the advertiser model that failed to send before and send.
+    NSArray *defeatedAdvertiserSessionDics = [[XhanceFileCache shareInstance] getArrayWithChannelType:XhanceFileCacheChannelTypeAdvertiser
+                                                                                             pathType:XhanceFileCachePathTypeSession];
+    for (int i = 0; i < defeatedAdvertiserSessionDics.count; i++) {
+        NSDictionary *sessionDic = [defeatedAdvertiserSessionDics objectAtIndex:i];
+        XhanceSessionModel *sessionModel = [XhanceSessionModel convertModelWithDic:sessionDic];
+        if (sessionModel == nil) {
+            continue;
+        }
         [self sendAdvertiserSession:sessionModel];
     }
     
-    NSArray <XhanceSessionModel *> *defeatedAdRealmSessions = [[XhanceSessionFileCache shareInstance] getAdRealmSessions];
-    for (int i = 0; i < defeatedAdRealmSessions.count; i++) {
-        XhanceSessionModel *sessionModel = [defeatedAdRealmSessions objectAtIndex:i];
+    // Get the adRealm model that failed to send before and send.
+    NSArray *defeatedAdRealmSessionDics = [[XhanceFileCache shareInstance] getArrayWithChannelType:XhanceFileCacheChannelTypeAdRealm
+                                                                                          pathType:XhanceFileCachePathTypeSession];
+    for (int i = 0; i < defeatedAdRealmSessionDics.count; i++) {
+        NSDictionary *sessionDic = [defeatedAdRealmSessionDics objectAtIndex:i];
+        XhanceSessionModel *sessionModel = [XhanceSessionModel convertModelWithDic:sessionDic];
+        if (sessionModel == nil) {
+            continue;
+        }
         [self sendAdRealmSession:sessionModel];
     }
 }

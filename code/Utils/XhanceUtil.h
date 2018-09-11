@@ -2,7 +2,7 @@
 //  STStatisticalUtil.h
 //  HolaStatistical
 //
-//  Created by steve on 16/4/14.
+//  Created by liuguojun on 16/4/14.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -35,6 +35,8 @@
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 
 + (NSString *)dictionaryToJson:(NSDictionary *)dic;
+
++ (NSString *)arrayToJson:(NSArray *)array;
 
 #pragma mark - URLEncoded
 + (NSString *)URLEncodedString:(NSString *)str;

@@ -2,12 +2,12 @@
 //  XhanceSessionSend.m
 //  XhanceSDK
 //
-//  Created by steve on 2018/5/17.
+//  Created by liuguojun on 2018/5/17.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
 #import "XhanceSessionSend.h"
-#import "XhanceSessionFileCache.h"
+#import "XhanceFileCache.h"
 #import "XhanceHttpManager.h"
 #import "XhanceAES.h"
 #import "XhanceSessionParameter.h"
@@ -37,12 +37,13 @@
                                                enDataStrForAdvertiser:enString
                                                        parameterModel:sessionParameter];
     
-    [XhanceHttpManager sendSessionForAdvertiser:jointParmeterUrlStr
-                                     retryCount:0
-                                     completion:^(id responseObject) {
-                                        [[XhanceSessionFileCache shareInstance] removeAdvertiserSession:sessionModel];
-                                     }
-                                          error:^(NSError *error) {}];
+    [XhanceHttpManager sendSessionForAdvertiser:jointParmeterUrlStr retryCount:0 completion:^(id responseObject) {
+        NSDictionary *sessionDic = [XhanceSessionModel convertDicWithModel:sessionModel];
+        [[XhanceFileCache shareInstance] removeDic:sessionDic
+                                       channelType:XhanceFileCacheChannelTypeAdvertiser
+                                          pathType:XhanceFileCachePathTypeSession];
+    } error:^(NSError *error) {
+    }];
 }
 
 + (void)sendAdRealmSession:(XhanceSessionModel *)sessionModel {
@@ -59,7 +60,10 @@
                                                      parameterModel:sessionParameter];
     
     [XhanceHttpManager sendSessionForAdRealm:jointParameterUrlStr retryCount:0 completion:^(id responseObject) {
-        [[XhanceSessionFileCache shareInstance] removeAdRealmSession:sessionModel];
+        NSDictionary *sessionDic = [XhanceSessionModel convertDicWithModel:sessionModel];
+        [[XhanceFileCache shareInstance] removeDic:sessionDic
+                                       channelType:XhanceFileCacheChannelTypeAdRealm
+                                          pathType:XhanceFileCachePathTypeSession];
     } error:^(NSError *error) {
     }];
 }

@@ -2,7 +2,7 @@
 //  XhanceHttpUrl.h
 //  XhanceSDK
 //
-//  Created by steve on 2018/5/15.
+//  Created by liuguojun on 2018/5/15.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -41,6 +41,12 @@
 #pragma mark - DeeplinkUrl
 
 - (NSString *)getDeeplinkUrlForAdvertiser;
+
+#pragma mark - CustomEventUrl
+
+- (NSString *)getCustomEventUrlForAdvertiser;
+
+- (NSString *)getCustomEventUrlForAdRealm;
 
 #pragma mark - jointUrl
 

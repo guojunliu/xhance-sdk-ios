@@ -2,7 +2,7 @@
 //  XhanceSDK.h
 //  XhanceSDK
 //
-//  Created by steve on 2018/4/12.
+//  Created by liuguojun on 2018/4/12.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -36,5 +36,13 @@
              productCurrencyCode:(NSString *)productCurrencyCode
                productIdentifier:(NSString *)productIdentifier
                  productCategory:(NSString *)productCategory;
+
+#pragma mark - CustomEvent
+
++ (void)customEventWithKey:(NSString *)key stringValue:(NSString *)value;
+
++ (void)customEventWithKey:(NSString *)key arrayValue:(NSArray<NSString *> *)value;
+
++ (void)customEventWithKey:(NSString *)key dictionaryValue:(NSDictionary<NSString *,NSString *> *)value;
 
 @end

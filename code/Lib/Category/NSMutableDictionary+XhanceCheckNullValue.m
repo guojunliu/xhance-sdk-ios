@@ -2,7 +2,7 @@
 //  NSMutableDictionary+XhanceCheckKeyAndValue.m
 //  HolaStatistical
 //
-//  Created by steve on 2016/12/27.
+//  Created by liuguojun on 2016/12/27.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -34,6 +34,38 @@
     else {
         [self setObject:anObject forKey:aKey];
     }
+}
+
+- (id)objectForCheckKey:(NSString *)aKey {
+    if (aKey == nil || [aKey isEqualToString:@""]) {
+        return nil;
+    }
+    if ([self allKeys].count <= 0) {
+        return nil;
+    }
+    if (![[self allKeys] containsObject:aKey]) {
+        return nil;
+    }
+    id obj = [self objectForKey:aKey];
+    return obj;
+}
+
+@end
+
+@implementation NSDictionary (XhanceCheckKeyAndValue)
+
+- (id)objectForCheckKey:(NSString *)aKey {
+    if (aKey == nil || [aKey isEqualToString:@""]) {
+        return nil;
+    }
+    if ([self allKeys].count <= 0) {
+        return nil;
+    }
+    if (![[self allKeys] containsObject:aKey]) {
+        return nil;
+    }
+    id obj = [self objectForKey:aKey];
+    return obj;
 }
 
 @end

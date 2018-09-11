@@ -2,7 +2,7 @@
 //  XhanceHttpUrl.m
 //  XhanceSDK
 //
-//  Created by steve on 2018/5/15.
+//  Created by liuguojun on 2018/5/15.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 #define IOS_TRACKING_URL_Path_INSTALL   @"install"
 #define IOS_TRACKING_URL_Path_EVENT     @"event"
 #define IOS_Deeplink_URL_Path_DEEPLINK  @"dl"
-#define IOS_TRACKING_URL_Path_IAP       @"iap"
+//#define IOS_TRACKING_URL_Path_IAP       @"iap"
 
 #import "XhanceHttpUrl.h"
 #import "XhanceUtil.h"
@@ -75,12 +75,12 @@ static XhanceHttpUrl *manager;
 #pragma mark - IAPUrl
 
 - (NSString *)getIAPUrlForAdvertiser {
-    NSString *u = [XhanceUtil urlWithDomain:_advertiserUrl path:IOS_TRACKING_URL_Path_IAP];
+    NSString *u = [XhanceUtil urlWithDomain:_advertiserUrl path:IOS_TRACKING_URL_Path_EVENT];
     return u;
 }
 
 - (NSString *)getIAPUrlForAdRealm {
-    NSString *u = [XhanceUtil urlWithDomain:IOS_TRACKING_URL_Domain path:IOS_TRACKING_URL_Path_IAP];
+    NSString *u = [XhanceUtil urlWithDomain:IOS_TRACKING_URL_Domain path:IOS_TRACKING_URL_Path_EVENT];
     return u;
 }
 
@@ -88,6 +88,18 @@ static XhanceHttpUrl *manager;
 
 - (NSString *)getDeeplinkUrlForAdvertiser {
     NSString *u = [XhanceUtil urlWithDomain:_advertiserUrl path:IOS_Deeplink_URL_Path_DEEPLINK];
+    return u;
+}
+
+#pragma mark - CustomEventUrl
+
+- (NSString *)getCustomEventUrlForAdvertiser {
+    NSString *u = [XhanceUtil urlWithDomain:_advertiserUrl path:IOS_TRACKING_URL_Path_EVENT];
+    return u;
+}
+
+- (NSString *)getCustomEventUrlForAdRealm {
+    NSString *u = [XhanceUtil urlWithDomain:IOS_TRACKING_URL_Domain path:IOS_TRACKING_URL_Path_EVENT];
     return u;
 }
 

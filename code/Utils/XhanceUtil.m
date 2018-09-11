@@ -2,7 +2,7 @@
 //  STStatisticalUtil.m
 //  HolaStatistical
 //
-//  Created by steve on 16/4/14.
+//  Created by liuguojun on 16/4/14.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -155,22 +155,44 @@
     return jsonStr;
 }
 
++ (NSString *)arrayToJson:(NSArray *)array {
+    if (array == nil || array.count == 0) {
+        return @"";
+    }
+    
+    NSError *parseError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:array options:kNilOptions error:&parseError];
+    if (parseError) {
+        return @"";
+    }
+    
+    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    if (jsonStr == nil) {
+        jsonStr = @"";
+    }
+    return jsonStr;
+}
+
 #pragma mark - URLEncodedString
 
 + (NSString *)URLEncodedString:(NSString *)str {
+    
+    if (str == nil || [str isEqualToString:@""]) {
+        return @"";
+    }
     
     double version = [[UIDevice currentDevice].systemVersion doubleValue];
     if (version < 9.0f) {
         NSString *encodedString = (NSString *) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes
                                                                  (kCFAllocatorDefault,
                                                                   (CFStringRef)str,
-                                                                  (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",
+                                                                  (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]{}\"",
                                                                   NULL,
                                                                   kCFStringEncodingUTF8));
         return encodedString;
     }
     else {
-        NSString *charactersToEscape = @"!$&'()*+,-./:;=?@_~%#[]";
+        NSString *charactersToEscape = @"!$&'()*+,-./:;=?@_~%#[]{}\"";
         NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
         NSString *encodedString = [str stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
         

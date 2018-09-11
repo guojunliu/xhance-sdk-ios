@@ -2,7 +2,7 @@
 //  XhanceSessionSend.h
 //  XhanceSDK
 //
-//  Created by steve on 2018/5/17.
+//  Created by liuguojun on 2018/5/17.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 

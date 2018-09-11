@@ -2,7 +2,7 @@
 //  XhanceSDK.m
 //  XhanceSDK
 //
-//  Created by steve on 2018/4/12.
+//  Created by liuguojun on 2018/4/12.
 //  Copyright © 2018 Adrealm. All rights reserved.
 //
 
@@ -13,6 +13,7 @@
 #import "XhanceSessionManager.h"
 #import "XhanceIAPManager.h"
 #import "XhanceDeeplinkManager.h"
+#import "XhanceCustomEventManager.h"
 
 @implementation XhanceSDK
 
@@ -65,6 +66,10 @@ BOOL isInit;
     
     //session
     [[XhanceSessionManager shareInstance] checkDefeatedSessionAndSendWithChildThread];
+    //customEvent
+    [XhanceCustomEventManager checkDefeatedCustomEventAndSendWithChildThread];
+    //iap
+    [XhanceIAPManager checkDefeatedIAPAndSendWithChildThread];
     
     isInit = YES;
 }
@@ -113,6 +118,35 @@ BOOL isInit;
                         productCurrencyCode:productCurrencyCode
                           productIdentifier:productIdentifier
                             productCategory:productCategory];
+}
+
+#pragma mark - CustomEvent
+
++ (void)customEventWithKey:(NSString *)key stringValue:(NSString *)value {
+    if (!isInit) {
+        NSLog(@"[XhanceSDK Log Error] SDK not initialized successfully. Please check!");
+        return;
+    }
+    
+    [XhanceCustomEventManager customEventWithKey:key value:value];
+}
+
++ (void)customEventWithKey:(NSString *)key arrayValue:(NSArray<NSString *> *)value {
+    if (!isInit) {
+        NSLog(@"[XhanceSDK Log Error] SDK not initialized successfully. Please check!");
+        return;
+    }
+    
+    [XhanceCustomEventManager customEventWithKey:key value:value];
+}
+
++ (void)customEventWithKey:(NSString *)key dictionaryValue:(NSDictionary<NSString *,NSString *> *)value {
+    if (!isInit) {
+        NSLog(@"[XhanceSDK Log Error] SDK not initialized successfully. Please check!");
+        return;
+    }
+    
+    [XhanceCustomEventManager customEventWithKey:key value:value];
 }
 
 @end
