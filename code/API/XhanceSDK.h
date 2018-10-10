@@ -39,6 +39,8 @@
 
 #pragma mark - CustomEvent
 
++ (void)enableCustomerEvent:(BOOL)enable;
+
 + (void)customEventWithKey:(NSString *)key stringValue:(NSString *)value;
 
 + (void)customEventWithKey:(NSString *)key arrayValue:(NSArray<NSString *> *)value;

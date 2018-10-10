@@ -122,6 +122,10 @@ BOOL isInit;
 
 #pragma mark - CustomEvent
 
++ (void)enableCustomerEvent:(BOOL)enable {
+    [XhanceCustomEventManager enableCustomerEvent:enable];
+}
+
 + (void)customEventWithKey:(NSString *)key stringValue:(NSString *)value {
     if (!isInit) {
         NSLog(@"[XhanceSDK Log Error] SDK not initialized successfully. Please check!");

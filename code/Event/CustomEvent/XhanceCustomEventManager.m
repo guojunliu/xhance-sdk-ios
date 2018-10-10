@@ -11,13 +11,23 @@
 #import "XhanceCustomEventParameter.h"
 #import "XhanceFileCache.h"
 
+BOOL CustomEventOpen;
+
 @implementation XhanceCustomEventManager
 
++ (void)enableCustomerEvent:(BOOL)enable {
+    CustomEventOpen = enable;
+}
+
 + (void)customEventWithKey:(NSString *)key value:(NSObject *)value {
+    
+    if (!CustomEventOpen) {
+        NSLog(@"[XhanceSDK Log Warning] SDK cannot use custom events. Please check!");
+        return;
+    }
+    
     XhanceCustomEventModel *model = [[XhanceCustomEventModel alloc] initWithKey:key value:value];
-    
     [self sendModel:model];
-    
 }
 
 #pragma mark - CacheModel
